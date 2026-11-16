@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crumb &amp; Co – Small bakery, big crumb. Utrecht</title>
+<meta name="description" content="Crumb & Co is a small bakery in Utrecht. Sourdough, pastries and cakes to order, fresh from the oven every morning. Voorbeeldstraat 12.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&display=swap" rel="stylesheet">
+
+<!--
+  Photos are free placeholders (Unsplash / Pexels licences, no attribution required) until Lotte's photos arrive:
+  - Sourdough loaf: Vicky Ng, Unsplash
+  - Cinnamon rolls: NastyaSensei, Pexels
+  - Almond croissant: Thomas Plets, Pexels
+  - Pink birthday cake: Zeynep Ladin Üstündağ, Pexels
+  - Hands in dough: Skyler Ewing, Pexels
+-->
+
+<style>
+  :root{
+    --green:#0f3d2e;
+    --green-2:#17503d;
+    --pink:#f4d3d9;
+    --pink-soft:#fbe8eb;
+    --cream:#fff9f5;
+    --ink:#12281f;
+    --serif:"Playfair Display", Georgia, "Times New Roman", serif;
+    --sans:"DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --script:"Caveat", "Segoe Script", cursive;
+    --wrap:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:72px}
+  body{font-family:var(--sans);font-size:1.0625rem;line-height:1.6;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 1.5rem}
+  .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  :focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+
+  /* ---------- buttons ---------- */
+  .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 1.6rem;border-radius:999px;border:2px solid currentColor;
+    font:700 .8rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;cursor:pointer;
+    transition:background .2s,color .2s,transform .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn--pink{background:var(--pink);color:var(--green);border-color:var(--pink)}
+  .btn--pink:hover{background:#fff;border-color:#fff}
+  .btn--ghost{color:var(--cream)}
+  .btn--ghost:hover{background:var(--cream);color:var(--green)}
+  .btn--green{background:var(--green);color:var(--cream);border-color:var(--green)}
+  .btn--green:hover{background:var(--green-2);border-color:var(--green-2)}
+  .btn--outline-green{color:var(--green)}
+  .btn--outline-green:hover{background:var(--green);color:var(--cream)}
+
+  /* ---------- header ---------- */
+  header.top{position:sticky;top:0;z-index:50;background:var(--green);color:var(--cream)}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:68px}
+  .logo{font-family:var(--serif);font-weight:900;font-size:1.5rem;letter-spacing:.02em;text-decoration:none;text-transform:uppercase;white-space:nowrap}
+  .logo em{font-style:italic;font-weight:500;color:var(--pink);text-transform:none}
+  nav ul{display:flex;gap:2rem;list-style:none}
+  nav a{font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:.4rem 0;border-bottom:2px solid transparent}
+  nav a:hover{border-color:var(--pink)}
+  header .btn{padding:.7rem 1.2rem;font-size:.72rem}
+
+  /* ---------- hero ---------- */
+  .hero{background:var(--green);color:var(--cream);position:relative;overflow:hidden;padding:3.5rem 0 5.5rem}
+  .hero::before{content:"";position:absolute;inset:0;
+    background:radial-gradient(60% 70% at 85% 40%,rgba(244,211,217,.16),transparent 70%),
+               radial-gradient(40% 50% at 0% 100%,rgba(255,255,255,.06),transparent 70%)}
+  .hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;align-items:center}
+  .vertical{position:absolute;left:.4rem;top:50%;transform:translateY(-50%) rotate(180deg);writing-mode:vertical-rl;
+    font-size:.68rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--pink);opacity:.9}
+  .hero h1{font-family:var(--serif);font-weight:900;text-transform:uppercase;line-height:.88;letter-spacing:-.01em;
+    font-size:clamp(4rem,11vw,9.5rem);position:relative;z-index:2}
+  .hero h1 em{display:block;text-transform:none;font-weight:500;color:var(--pink);font-size:.8em;margin:.05em 0 .05em .12em}
+  .tagline{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:500;margin:1.6rem 0 .5rem;line-height:1.2}
+  .script{font-family:var(--script);font-size:clamp(1.6rem,3vw,2.2rem);color:var(--pink);line-height:1.1}
+  .hero .lede{max-width:34ch;margin:1.2rem 0 2rem;color:rgba(255,249,245,.88)}
+  .hero .actions{display:flex;flex-wrap:wrap;gap:.9rem}
+  .status{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.8rem;padding:.55rem 1rem;border-radius:999px;
+    background:rgba(255,249,245,.1);font-size:.9rem}
+  .status i{width:.65rem;height:.65rem;border-radius:50%;background:#9aa;display:inline-block}
+  .status.open i{background:#7be3a5;box-shadow:0 0 0 4px rgba(123,227,165,.25)}
+  .status.closed i{background:var(--pink)}
+
+  /* arch picture frames (inspired by the arches on the reference site) */
+  .arch{border-radius:999px 999px 18px 18px;overflow:hidden;background:var(--pink);position:relative;border:10px solid var(--cream);aspect-ratio:3/4}
+  .arch img{width:100%;height:100%;object-fit:cover}
+  .hero .arch{max-width:420px;margin-left:auto;box-shadow:0 30px 60px rgba(0,0,0,.28)}
+  .badge{position:absolute;z-index:3;width:150px;height:150px;right:-.6rem;top:-1.5rem;background:var(--pink);color:var(--green);border-radius:50%;
+    display:grid;place-items:center}
+  .badge svg{width:100%;height:100%;animation:spin 28s linear infinite}
+  .badge text{font:700 12px var(--sans);letter-spacing:.2em;text-transform:uppercase;fill:var(--green)}
+  .badge b{position:absolute;font-family:var(--serif);font-size:2rem;font-style:italic}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .hero .pic{position:relative}
+
+  /* ---------- generic sections ---------- */
+  section{padding:6rem 0}
+  .eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;margin-bottom:1rem;display:block}
+  h2{font-family:var(--serif);font-weight:900;text-transform:uppercase;line-height:.95;font-size:clamp(2.6rem,6.5vw,5.2rem);letter-spacing:-.005em}
+  h2 em{font-weight:500;text-transform:none;color:var(--green-2)}
+  .on-green h2 em{color:var(--pink)}
+
+  /* story */
+  .story{background:var(--pink-soft)}
+  .story .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:4rem;align-items:center}
+  .story .arch{max-width:380px;aspect-ratio:4/5}
+  .story p{max-width:46ch;margin-top:1.6rem;font-size:1.15rem}
+  .story .script{color:var(--green);margin-top:1.4rem;display:block}
+
+  /* menu */
+  .menu{background:var(--cream)}
+  .menu .head{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap;margin-bottom:3rem}
+  .menu .head p{max-width:32ch}
+  .menu .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:start}
+  .list h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:1.5rem;color:var(--green-2);margin:2rem 0 .4rem}
+  .list h3:first-child{margin-top:0}
+  .list ul{list-style:none}
+  .list li{display:flex;align-items:baseline;gap:.8rem;padding:.7rem 0;font-size:1.15rem}
+  .list li::after{content:"";order:2;flex:1;border-bottom:2px dotted rgba(15,61,46,.3);transform:translateY(-.25em)}
+  .list li span:first-child{order:1;font-weight:500}
+  .list li .price{order:3;font-family:var(--serif);font-weight:700;font-size:1.25rem;white-space:nowrap}
+  .list .note{margin-top:1.8rem;font-size:.9rem;color:rgba(18,40,31,.7)}
+  .trio{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .trio .arch{border-width:6px;aspect-ratio:3/4}
+  .trio .arch:first-child{grid-column:1/-1;aspect-ratio:16/11;border-radius:999px 999px 14px 14px}
+  .trio .arch:nth-child(3){margin-top:-1.5rem}
+  .trio figcaption{position:absolute;left:0;right:0;bottom:0;padding:.7rem 1rem;background:linear-gradient(transparent,rgba(15,61,46,.8));
+    color:var(--cream);font-family:var(--script);font-size:1.5rem;line-height:1.1;text-align:center}
+
+  /* cakes */
+  .cakes{background:var(--green);color:var(--cream)}
+  .cakes .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:4rem;align-items:center}
+  .cakes h2{color:var(--cream)}
+  .cakes .intro{margin:1.5rem 0 2rem;max-width:44ch;color:rgba(255,249,245,.9);font-size:1.15rem}
+  .steps{list-style:none;display:grid;gap:1.1rem;margin-bottom:2.2rem;counter-reset:s}
+  .steps li{display:grid;grid-template-columns:3rem 1fr;gap:1rem;align-items:start;counter-increment:s}
+  .steps li::before{content:counter(s);font-family:var(--serif);font-weight:900;font-size:1.3rem;width:2.6rem;height:2.6rem;border-radius:50%;
+    background:var(--pink);color:var(--green);display:grid;place-items:center}
+  .steps strong{display:block;font-size:1.05rem}
+  .steps span{color:rgba(255,249,245,.82);font-size:.98rem}
+  .cakes .small{margin-top:1.1rem;font-size:.9rem;color:rgba(255,249,245,.75)}
+  .price-tag{display:inline-block;background:var(--pink);color:var(--green);font-family:var(--serif);font-weight:900;
+    padding:.5rem 1.2rem;border-radius:999px;font-size:1.15rem;margin-bottom:1.5rem}
+  .cakes .arch{max-width:380px;margin-left:auto;aspect-ratio:3/4.2}
+
+  /* hours + find us */
+  .visit{background:var(--pink-soft)}
+  .visit .head{margin-bottom:3rem}
+  .visit .cols{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+  .card{background:var(--cream);border-radius:22px;padding:2.2rem 2.4rem}
+  .card h3{font-family:var(--serif);font-size:1.7rem;font-weight:700;margin-bottom:1rem}
+  table.hours{width:100%;border-collapse:collapse}
+  table.hours th,table.hours td{text-align:left;padding:.75rem 0;border-bottom:1px solid rgba(15,61,46,.15);font-weight:500}
+  table.hours td{text-align:right;font-family:var(--serif);font-weight:700;font-size:1.15rem}
+  table.hours tr:last-child th,table.hours tr:last-child td{border-bottom:0}
+  table.hours tr.today th,table.hours tr.today td{color:var(--green);background:var(--pink);padding-left:.8rem;padding-right:.8rem}
+  table.hours tr.today th{border-radius:12px 0 0 12px}
+  table.hours tr.today td{border-radius:0 12px 12px 0}
+  table.hours .closed{color:#8a3b4b}
+  .hint{margin-top:1.2rem;font-family:var(--script);font-size:1.6rem;line-height:1.15;color:var(--green)}
+  address{font-style:normal;font-size:1.2rem;line-height:1.5;margin-bottom:1.4rem}
+  .contact{list-style:none;display:grid;gap:.5rem;margin:1.4rem 0 1.8rem}
+  .contact a{text-underline-offset:3px;font-weight:500}
+  .bike{font-size:.92rem;color:rgba(18,40,31,.75);margin-top:1.4rem}
+
+  /* footer */
+  footer{background:var(--green);color:var(--cream);padding:4.5rem 0 2rem;overflow:hidden}
+  footer .big{font-family:var(--serif);font-weight:900;text-transform:uppercase;line-height:.85;letter-spacing:-.01em;
+    font-size:clamp(3.5rem,14vw,12rem);white-space:nowrap}
+  footer .big em{font-weight:500;text-transform:none;color:var(--pink)}
+  footer .row{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-top:2.4rem}
+  footer .row p{max-width:30ch;color:rgba(255,249,245,.8)}
+  footer .legal{margin-top:3rem;padding-top:1.4rem;border-top:1px solid rgba(255,249,245,.2);font-size:.8rem;color:rgba(255,249,245,.6)}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:900px){
+    nav{display:none}
+    .hero{padding:2.5rem 0 4rem}
+    .hero .wrap,.story .wrap,.menu .grid,.cakes .wrap,.visit .cols{grid-template-columns:1fr;gap:2.5rem}
+    .hero .arch{margin:1.5rem auto 0;max-width:320px}
+    .badge{width:120px;height:120px;right:-.2rem;top:-1.2rem}
+    .vertical{display:none}
+    .story .arch,.cakes .arch{margin:0 auto}
+    .cakes .arch{order:-1;max-width:300px}
+    section{padding:4rem 0}
+    .card{padding:1.6rem 1.4rem}
+    .trio{max-width:520px}
+  }
+  @media (max-width:420px){
+    .logo{font-size:1.25rem}
+    header .btn{padding:.6rem .9rem}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .badge svg{animation:none}
+    html{scroll-behavior:auto}
+    .btn{transition:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Crumb &amp; Co, back to top">Crumb <em>&amp;</em> Co</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#bake">What we bake</a></li>
+        <li><a href="#cakes">Cakes</a></li>
+        <li><a href="#visit">Hours &amp; find us</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--pink" href="#cakes">Cake, please!</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <span class="vertical" aria-hidden="true">Welcome to Crumb &amp; Co · Utrecht</span>
+    <div class="wrap">
+      <div>
+        <h1>Crumb <em>&amp;</em> Co</h1>
+        <p class="tagline">Small bakery, big crumb.</p>
+        <p class="script">Fresh from the oven, every morning.</p>
+        <p class="lede">Sourdough, pastries and cakes to order. Baked in Utrecht, Voorbeeldstraat 12.</p>
+        <div class="actions">
+          <a class="btn btn--pink" href="#cakes">Cake, please! &rarr;</a>
+          <a class="btn btn--ghost" href="#bake">See what we bake</a>
+        </div>
+        <div class="status" id="status" aria-live="polite"><i></i><span>Tue–Fri 07:00–17:00 · Sat 07:00–15:00 · Sun 08:00–13:00</span></div>
+      </div>
+      <div class="pic">
+        <div class="badge" aria-hidden="true">
+          <svg viewBox="0 0 150 150"><defs><path id="circ" d="M75,75 m-56,0 a56,56 0 1,1 112,0 a56,56 0 1,1 -112,0"/></defs>
+            <text><textPath href="#circ">fresh from the oven • every morning •</textPath></text></svg>
+          <b>&amp;</b>
+        </div>
+        <div class="arch">
+          <img src="https://images.unsplash.com/photo-1620921592619-652411a0d01a?auto=format&fit=crop&w=1000&q=70" alt="A round sourdough loaf on a wooden tray" loading="eager" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STORY -->
+  <section class="story" id="about">
+    <div class="wrap">
+      <div class="arch">
+        <img src="https://images.pexels.com/photos/10009354/pexels-photo-10009354.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Hands working a piece of dough on a floured table" loading="lazy" onerror="this.style.display='none'">
+      </div>
+      <div>
+        <span class="eyebrow">Hello, we're Crumb &amp; Co</span>
+        <h2>Baked <em>by hand,</em><br>every day</h2>
+        <p>We started this little bakery in Utrecht in 2019. Every morning we bake fresh: sourdough bread, pastries and cakes to order. Come by for a loaf, a cinnamon knot and a coffee.</p>
+        <span class="script">See you at the counter!</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="bake">
+    <div class="wrap">
+      <div class="head">
+        <h2>What we <em>bake</em></h2>
+        <p>Cinnamon knots go fast, so come early.</p>
+      </div>
+      <div class="grid">
+        <div class="list">
+          <h3>Bread</h3>
+          <ul>
+            <li><span>Sourdough loaf</span><span class="price">€ 6,50</span></li>
+            <li><span>Seeded rye loaf</span><span class="price">€ 6,00</span></li>
+          </ul>
+          <h3>Pastries</h3>
+          <ul>
+            <li><span>Cinnamon knot</span><span class="price">€ 3,75</span></li>
+            <li><span>Almond croissant</span><span class="price">€ 3,50</span></li>
+            <li><span>Cardamom bun</span><span class="price">€ 3,25</span></li>
+          </ul>
+          <h3>Cakes &amp; coffee</h3>
+          <ul>
+            <li><span>Birthday cake (6–8 people)</span><span class="price">from € 38</span></li>
+            <li><span>Coffee</span><span class="price">€ 3,00</span></li>
+          </ul>
+          <p class="note">Prices can change.</p>
+        </div>
+        <div class="trio">
+          <figure class="arch">
+            <img src="https://images.pexels.com/photos/3951306/pexels-photo-3951306.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Freshly baked cinnamon rolls with icing" loading="lazy" onerror="this.style.display='none'">
+            <figcaption>Cinnamon knots</figcaption>
+          </figure>
+          <figure class="arch">
+            <img src="https://images.pexels.com/photos/14411697/pexels-photo-14411697.jpeg?auto=compress&cs=tinysrgb&w=800" alt="An almond croissant dusted with powdered sugar" loading="lazy" onerror="this.style.display='none'">
+            <figcaption>Almond croissants</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAKES -->
+  <section class="cakes on-green" id="cakes">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow" style="color:var(--pink)">Cakes to order</span>
+        <h2>Cake, <em>please!</em></h2>
+        <p class="intro">Birthday coming up? Mila and Sanne bake it for you.</p>
+        <span class="price-tag">Birthday cake (6–8 people): from € 38</span>
+        <ol class="steps">
+          <li><div><strong>Email us at least 3 days ahead</strong><span>We need time to plan and buy the ingredients. A cake for tomorrow, sadly, won't work.</span></div></li>
+          <li><div><strong>We bake it for you</strong><span>A fancier cake costs a bit more than the starting price.</span></div></li>
+          <li><div><strong>Pick it up and pay in the shop</strong><span>Cash or card is fine.</span></div></li>
+        </ol>
+        <a class="btn btn--pink" id="cakeMail" href="mailto:hello@crumbandco.example?subject=Cake%20order&amp;body=Hi%20Crumb%20%26%20Co%2C%0A%0AI%27d%20like%20to%20order%20a%20cake.%0A%0APickup%20date%3A%20%0ANumber%20of%20people%3A%20%0AFlavour%20or%20wishes%3A%20%0AMy%20name%20and%20phone%3A%20%0A">Cake, please! Send an email &rarr;</a>
+        <p class="small">Pick-up only. We don't deliver. Online payment isn't available yet.</p>
+      </div>
+      <div class="arch">
+        <img src="https://images.pexels.com/photos/29192489/pexels-photo-29192489.jpeg?auto=compress&cs=tinysrgb&w=900" alt="A pastel birthday cake with pink buttercream" loading="lazy" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS + FIND US -->
+  <section class="visit" id="visit">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Come say hi</span>
+        <h2>Hours <em>&amp; find us</em></h2>
+      </div>
+      <div class="cols">
+        <div class="card">
+          <h3>Opening hours</h3>
+          <table class="hours" id="hours">
+            <tr data-d="1"><th scope="row">Monday</th><td class="closed">Closed</td></tr>
+            <tr data-d="2"><th scope="row">Tuesday</th><td>07:00 – 17:00</td></tr>
+            <tr data-d="3"><th scope="row">Wednesday</th><td>07:00 – 17:00</td></tr>
+            <tr data-d="4"><th scope="row">Thursday</th><td>07:00 – 17:00</td></tr>
+            <tr data-d="5"><th scope="row">Friday</th><td>07:00 – 17:00</td></tr>
+            <tr data-d="6"><th scope="row">Saturday</th><td>07:00 – 15:00</td></tr>
+            <tr data-d="0"><th scope="row">Sunday</th><td>08:00 – 13:00</td></tr>
+          </table>
+          <p class="hint">Sunday: eight to one. Eight, not nine!</p>
+        </div>
+        <div class="card">
+          <h3>Find us</h3>
+          <address>Crumb &amp; Co<br>Voorbeeldstraat 12<br>3511 AB Utrecht</address>
+          <a class="btn btn--green" href="https://www.google.com/maps/search/?api=1&amp;query=Voorbeeldstraat+12+3511+AB+Utrecht" target="_blank" rel="noopener">Open in maps &rarr;</a>
+          <ul class="contact">
+            <li>Email: <a href="mailto:hello@crumbandco.example">hello@crumbandco.example</a></li>
+            <li>Phone: <a href="tel:+31305550142">030-5550142</a></li>
+            <li>Instagram: <a href="https://www.instagram.com/crumbandco.utrecht" target="_blank" rel="noopener">@crumbandco.utrecht</a></li>
+          </ul>
+          <p class="bike">We're next to the bike shop. Parking is tricky, so come by bike!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="big" aria-hidden="true">Crumb <em>&amp;</em> Co</div>
+    <div class="row">
+      <p>Small bakery, big crumb. Fresh from the oven, every morning.</p>
+      <a class="btn btn--ghost" href="https://www.instagram.com/crumbandco.utrecht" target="_blank" rel="noopener">Follow us on Instagram</a>
+    </div>
+    <p class="legal">© 2019–<span id="yr">2026</span> Crumb &amp; Co, Voorbeeldstraat 12, 3511 AB Utrecht. Placeholder photos from Unsplash and Pexels (Vicky Ng, NastyaSensei, Thomas Plets, Zeynep Ladin Üstündağ, Skyler Ewing) until our own photos arrive.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Opening hours in Amsterdam time. Index = JS weekday (0 = Sunday).
+  var H = {0:[8,13],1:null,2:[7,17],3:[7,17],4:[7,17],5:[7,17],6:[7,15]};
+  var names = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  function pad(n){return (n<10?"0":"")+n}
+  function fmt(h){return pad(h)+":00"}
+  var parts = new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Amsterdam",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date());
+  var wd = names.indexOf(parts.filter(function(p){return p.type==="weekday"})[0].value);
+  var hr = parseInt(parts.filter(function(p){return p.type==="hour"})[0].value,10) % 24;
+  var mn = parseInt(parts.filter(function(p){return p.type==="minute"})[0].value,10);
+  var now = hr + mn/60;
+
+  var row = document.querySelector('#hours tr[data-d="'+wd+'"]');
+  if(row) row.classList.add("today");
+
+  var el = document.getElementById("status"), txt = el.querySelector("span"), h = H[wd], msg, cls;
+  if(h && now>=h[0] && now<h[1]){ cls="open"; msg="Open now, until "+fmt(h[1]); }
+  else{
+    cls="closed";
+    var next=null, i, d, add;
+    if(h && now<h[0]){ next={day:"today",h:h[0]}; }
+    else{
+      for(i=1;i<=7;i++){ d=(wd+i)%7; if(H[d]){ add=i; break; } }
+      next={day:(add===1?"tomorrow":names[d]),h:H[d][0]};
+    }
+    msg="Closed now, opens "+next.day+" at "+fmt(next.h);
+  }
+  el.classList.add(cls); txt.textContent=msg;
+  document.getElementById("yr").textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
