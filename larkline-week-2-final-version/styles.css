@@ -2094,3 +2094,7 @@ body { padding-bottom: var(--footer-bar); }
     background: linear-gradient(0deg, rgba(29,24,19,.98) 0%, rgba(29,24,19,.88) 48%, rgba(29,24,19,.38) 100%);
   }
 }
+/* Full-page capture mode: anchor the bottom bar to the footer, not the viewport. */
+html.screenshot-mode body { padding-bottom: 0; }
+html.screenshot-mode .site-footer { padding-bottom: calc(var(--footer-bar) + var(--size-64)); }
+html.screenshot-mode .footer-bottom { position: absolute; bottom: 0; }
