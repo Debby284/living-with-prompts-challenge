@@ -1,0 +1,971 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Larkline Estates · Estate agents in Horst aan de Maas</title>
+  <meta name="description" content="One agent from the first coffee to the closing. Larkline Estates sells homes across the villages of Horst aan de Maas.">
+  <link rel="icon" href="assets/larkline-logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Icon sprite. The houses come from the Larkline logo. -->
+  <svg class="hidden" aria-hidden="true" focusable="false">
+    <symbol id="i-houses" viewBox="20 28 234 152">
+      <path fill="currentColor" fill-rule="evenodd" d="M20 180V112L55 70L90 112V180H62V150H48V180ZM36 122H48V134H36ZM63 122H75V134H63Z"/>
+      <path fill="currentColor" fill-rule="evenodd" d="M100 180V78L140 28L180 78V180H147V150H133V180ZM121 89H133V101H121ZM148 89H160V101H148Z"/>
+      <path fill="currentColor" fill-rule="evenodd" d="M190 180V126L222 88L254 126V180H229V150H215V180ZM203 132H215V144H203ZM229 132H241V144H229Z"/>
+    </symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><path fill="currentColor" d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></symbol>
+    <symbol id="i-question" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M9.6 9.4a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.6"/><circle cx="12" cy="16.8" r="1.1" fill="currentColor"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M9 6v12M15 6v12"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M8 5.5v13l10.5-6.5z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 3.5a8.5 8.5 0 0 0-7.4 12.7L3.5 20.5l4.4-1.1A8.5 8.5 0 1 0 12 3.5z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3.5 6h17v12h-17zM3.5 6l8.5 7 8.5-7"/></symbol>
+    <symbol id="i-bed" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 18V6M3 14h18v4M21 14v-3a3 3 0 0 0-3-3h-7v6M7 11.5h.01"/></symbol>
+    <symbol id="i-bath" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M3 12h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5zM6 12V6a2 2 0 0 1 4 0M7 19l-1 2M17 19l1 2"/></symbol>
+    <symbol id="i-area" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 4h16v16H4zM4 9h5M15 4v5M9 20v-6h11"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M16 16l4.5 4.5"/></symbol>
+    <symbol id="i-help-sell" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 30L32 10l24 20"/><path d="M14 25v29h36V25"/><path d="M27 54V42h10v12"/><path d="M38 32h22v12H38z"/><path d="M42 32v-4M56 32v-4"/><path d="M42 38h14"/></g></symbol>
+    <symbol id="i-help-buy" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 30L30 10l24 20"/><path d="M12 25v29h20"/><path d="M24 54V40h8"/><circle cx="44" cy="44" r="7"/><path d="M49 49l9 9M54 54l3-3M51 51l2-2"/></g></symbol>
+    <symbol id="i-help-value" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 30L32 10l24 20"/><path d="M14 25v29h36V25"/><path d="M22 48l8-9 6 5 9-11"/><path d="M39 33h6v6"/></g></symbol>
+    <symbol id="i-help-village" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M32 58s16-14.5 16-28a16 16 0 0 0-32 0c0 13.5 16 28 16 28z"/><path d="M24 31l8-7 8 7"/><path d="M26.5 29v8h11v-8"/><path d="M30.5 37v-4h3v4"/></g></symbol>
+    <symbol id="i-house-search" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 30L32 8l26 22"/><path d="M44 18v-8h6v13"/><path d="M12 25v31h40V25"/><circle cx="30" cy="38" r="8"/><path d="M36 44l7 7"/></g></symbol>
+  </svg>
+
+  <a class="skip-link body-s" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Open menu">
+    <a class="site-logo" href="index.html" aria-label="Larkline Estates, home">
+      <span class="notch-paper"><img src="assets/larkline-logo.svg" alt="Larkline" width="180" height="40"></span>
+      <span class="notch-curl" aria-hidden="true"></span>
+    </a>
+    <div class="header-rows">
+      <div class="header-top flex-row flex-wrap flex-align-center flex-justify-end gap-24">
+        <div class="header-buttons flex-row flex-wrap gap-12">
+          <form class="header-search" role="search" aria-label="Search the site" action="index.html#homes">
+            <button class="header-search-toggle" type="button" aria-label="Open search" aria-expanded="false" aria-controls="site-search"><svg class="header-search-icon" aria-hidden="true"><use href="#i-search"/></svg></button>
+            <input class="header-search-input body-s" id="site-search" type="search" name="q" placeholder="Search homes, villages or questions" aria-label="Search homes, villages or questions" tabindex="-1">
+          </form>
+          <div class="lang-switch body-s" role="group" aria-label="Language">
+            <button class="lang-btn is-active" type="button" data-lang="en" aria-pressed="true">EN</button><span class="lang-sep" aria-hidden="true">|</span><button class="lang-btn" type="button" data-lang="nl" aria-pressed="false">NL</button>
+          </div>
+          <a class="btn-solid-on-dark" href="index.html#valuation">Free valuation</a>
+        </div>
+      </div>
+      <nav class="site-nav" aria-label="Main">
+        <ul class="site-nav-list">
+          <li><a class="nav-link body-m heading-on-dark" href="index.html#help">How we help</a></li>
+          <li><a class="nav-link body-m heading-on-dark" href="index.html#villages">Villages</a></li>
+          <li><a class="nav-link body-m heading-on-dark" href="index.html#homes">Homes for sale</a></li>
+          <li><a class="nav-link body-m heading-on-dark" href="index.html#team">Our team</a></li>
+          <li><a class="nav-link body-m heading-on-dark" href="index.html#faq">Questions</a></li>
+          <li><a class="nav-link body-m heading-on-dark" href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="lang-switch lang-switch-mobile body-s" role="group" aria-label="Language">
+      <button class="lang-btn is-active" type="button" data-lang="en" aria-pressed="true">EN</button><span class="lang-sep" aria-hidden="true">|</span><button class="lang-btn" type="button" data-lang="nl" aria-pressed="false">NL</button>
+    </div>
+    <label class="nav-burger" for="nav-toggle" aria-hidden="true"><span></span><span></span></label>
+  </header>
+
+  <main id="main">
+
+    <!-- 1. HERO: a real sale board, with the Larkline board placed on top of it -->
+    <section class="hero hero-sign bg-dark-1 boxed-l body-on-dark" aria-labelledby="hero-title">
+      <div class="hero-photo" aria-hidden="true">
+        <img class="hero-photo-img" src="https://images.unsplash.com/photo-1603917801094-9b603f226259?auto=format&fit=crop&w=2000&q=75" alt="" fetchpriority="high">
+      </div>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-board">
+        <div class="sign-board">
+          <img class="sign-logo" src="assets/larkline-logo.svg" alt="Larkline">
+          <p class="sign-sub">Horst aan de Maas</p>
+          <a class="sign-contact sign-mail" href="mailto:hello@larkline.example" aria-label="Email hello@larkline.example"><svg class="sign-icon" aria-hidden="true"><use href="#i-mail"/></svg><span class="sign-contact-text">hello@larkline.example</span></a>
+          <a class="sign-contact sign-whatsapp" href="https://wa.me/31775550100" aria-label="WhatsApp 077 555 0100"><span class="whatsapp-badge sign-wa-badge" aria-hidden="true"><svg class="whatsapp-icon"><use href="#i-whatsapp"/></svg></span><span class="sign-contact-text">WhatsApp us</span></a>
+          <p class="sign-band">For sale</p>
+          <a class="sign-contact sign-phone" href="tel:+31775550100" aria-label="Call 077 555 0100"><svg class="sign-icon" aria-hidden="true"><use href="#i-phone"/></svg><span class="sign-contact-text">077 555 0100</span></a>
+        </div>
+      </div>
+      <div class="hero-content hero-sign-content flex-column gap-24">
+        <p class="sub-title subtitle-on-dark"><svg class="eyebrow-icon" aria-hidden="true"><use href="#i-houses"/></svg><span>Estate agents in Horst aan de Maas</span></p>
+        <h1 id="hero-title" class="title-1 heading-on-dark hero-title">One agent, from the first coffee to the closing.</h1>
+        <a class="hero-place body-l flex-column gap-8" href="#contact" data-to-map aria-haspopup="dialog"><span class="hero-place-text">In North Limburg, the Netherlands, in the beautiful municipality of Horst aan de Maas</span><span class="hero-place-cta body-m-strong flex-row flex-align-center gap-8">See where we are<svg class="meta-icon" aria-hidden="true"><use href="#i-arrow"/></svg><span class="hero-place-pin-wrap" aria-hidden="true"><svg class="hero-place-pin"><use href="#i-pin"/></svg></span></span></a>
+        <figure class="hero-quote flex-column gap-8"><blockquote class="hero-quote-text"><p>We take on fewer clients, so the agent who values your home is the one who sells it.</p></blockquote><figcaption class="hero-quote-name body-s">Claire Morgan, founder</figcaption></figure>
+        <div class="flex-row flex-wrap flex-align-center gap-24">
+          <a class="btn-solid" href="#valuation">Plan a free valuation <svg class="btn-icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="text-link link-on-dark body-m" href="#homes">See homes for sale</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 2. ABOUT: small on purpose (office photo) -->
+    <section class="about-wall-section bg-light-1 boxed-l pad-tb-128" aria-labelledby="about-title">
+      <div class="about-layout">
+        <figure class="about-photo reveal">
+          <div class="about-photo-recess"><img class="rounded-m" src="assets/larkline-team.jpg" alt="The Larkline team together at the office table" width="1672" height="941" loading="lazy"></div>
+          <figcaption class="body-s detail-on-light">The Larkline team at the office in Horst.</figcaption>
+        </figure>
+        <div class="about-card card pad-48 flex-column gap-24 shadow-m reveal">
+          <p class="sub-title subtitle-on-light"><svg class="eyebrow-icon" aria-hidden="true"><use href="#i-houses"/></svg><span>Small on purpose</span></p>
+          <h2 id="about-title" class="title-3 heading-on-light">Fewer clients, so nobody gets passed around.</h2>
+          <p class="body-m">Claire Morgan started Larkline nine years ago, after seeing clients handed from desk to desk at a big firm. Today it is Claire and four agents at the office in Horst. We know the streets, and we help you decide.</p>
+          <ul class="fact-list flex-column gap-16" role="list">
+            <li class="flex-row flex-align-start gap-12"><svg class="fact-icon" aria-hidden="true"><use href="#i-check"/></svg><span class="body-m heading-on-light">One agent per client, start to finish</span></li>
+            <li class="flex-row flex-align-start gap-12"><svg class="fact-icon" aria-hidden="true"><use href="#i-check"/></svg><span class="body-m heading-on-light">Four local agents, some looking after several villages</span></li>
+            <li class="flex-row flex-align-start gap-12"><svg class="fact-icon" aria-hidden="true"><use href="#i-check"/></svg><span class="body-m heading-on-light">Sales only, no rentals</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. HOW CAN WE HELP: four icon cards on a dark background -->
+    <section id="help" class="bg-dark-1 dark-surface boxed-l pad-tb-128 flex-column flex-align-center gap-40 body-on-dark" aria-labelledby="help-title">
+      <div class="flex-column flex-align-center gap-20 text-center help-head">
+        <p class="sub-title subtitle-on-dark"><svg class="eyebrow-icon" aria-hidden="true"><use href="#i-houses"/></svg><span>What we do</span></p>
+        <h2 id="help-title" class="title-2 heading-on-dark">How can we help?</h2>
+        <p class="body-l">Selling or buying in Horst aan de Maas, you always deal with one agent who knows your village.</p>
+      </div>
+      <ul class="help-grid gap-24" role="list">
+          <li>
+            <a class="help-card flex-column flex-align-center gap-16 text-center" href="#team">
+              <svg class="help-icon" aria-hidden="true"><use href="#i-help-sell"/></svg>
+              <h3 class="title-6 heading-on-light">Sell your home</h3>
+              <p class="body-s body-on-light">One agent from the first visit to the notary.</p>
+              <span class="body-m-strong link-on-light help-link flex-row flex-align-center gap-8">Talk to us<svg class="meta-icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+            </a>
+          </li>
+          <li>
+            <a class="help-card flex-column flex-align-center gap-16 text-center" href="#homes">
+              <svg class="help-icon" aria-hidden="true"><use href="#i-help-buy"/></svg>
+              <h3 class="title-6 heading-on-light">Buy a home</h3>
+              <p class="body-s body-on-light">Find a home and call the agent directly.</p>
+              <span class="body-m-strong link-on-light help-link flex-row flex-align-center gap-8">See homes<svg class="meta-icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+            </a>
+          </li>
+          <li>
+            <a class="help-card flex-column flex-align-center gap-16 text-center" href="#valuation">
+              <svg class="help-icon" aria-hidden="true"><use href="#i-help-value"/></svg>
+              <h3 class="title-6 heading-on-light">Free valuation</h3>
+              <p class="body-s body-on-light">An honest price, at your own kitchen table.</p>
+              <span class="body-m-strong link-on-light help-link flex-row flex-align-center gap-8">Plan a valuation<svg class="meta-icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+            </a>
+          </li>
+          <li>
+            <a class="help-card flex-column flex-align-center gap-16 text-center" href="#villages">
+              <svg class="help-icon" aria-hidden="true"><use href="#i-help-village"/></svg>
+              <h3 class="title-6 heading-on-light">Choose your village</h3>
+              <p class="body-s body-on-light">Honest advice on where you would feel at home.</p>
+              <span class="body-m-strong link-on-light help-link flex-row flex-align-center gap-8">The villages<svg class="meta-icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+            </a>
+          </li>
+      </ul>
+    </section>
+
+    <!-- 4. VILLAGES: street-level feeling, scroll sideways -->
+    <section id="villages" class="bg-light-2 boxed-l pad-tb-128 flex-column gap-40" aria-labelledby="villages-title">
+      <div class="section-head flex-row flex-wrap flex-justify-between flex-align-end gap-24">
+        <div class="flex-column gap-20 head-text">
+          <p class="sub-title subtitle-on-light"><svg class="eyebrow-icon" aria-hidden="true"><use href="#i-houses"/></svg><span>The villages</span></p>
+          <h2 id="villages-title" class="title-2 heading-on-light">Choose the village first. Then the house.</h2>
+        </div>
+        <p class="body-l head-aside">Horst aan de Maas is a municipality of villages, each with its own pace. Our agents live and work here, and they will tell you honestly where you would feel at home.</p>
+      </div>
+      <div class="filter flex-row gap-8" role="radiogroup" aria-label="Filter villages">
+        <input class="filter-input" type="radio" name="village-filter" id="vf-all" checked>
+        <label class="filter-chip body-s" for="vf-all">All villages</label>
+        <input class="filter-input" type="radio" name="village-filter" id="vf-maas">
+        <label class="filter-chip body-s" for="vf-maas">By the Maas</label>
+        <input class="filter-input" type="radio" name="village-filter" id="vf-country">
+        <label class="filter-chip body-s" for="vf-country">Countryside and the Peel</label>
+        <input class="filter-input" type="radio" name="village-filter" id="vf-centre">
+        <label class="filter-chip body-s" for="vf-centre">Lively village centres</label>
+      </div>
+      <div class="village-picker">
+        <ul class="village-list" aria-label="Villages">
+          <li class="village-item" data-area="centre"><button type="button" class="village-tab flex-row flex-justify-between flex-align-center gap-16" aria-controls="village-0" aria-pressed="true"><span class="village-tab-name">Horst</span></button><button type="button" class="village-agent village-agent-list body-s" data-agent="Daniel"><span>Ask Daniel</span><svg class="village-agent-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><img src="https://images.unsplash.com/photo-1600679472868-eae382e28b34?auto=format&fit=crop&w=400&h=400&q=75&crop=faces" alt="" loading="lazy"></button></li>
+          <li class="village-item" data-area="country"><button type="button" class="village-tab flex-row flex-justify-between flex-align-center gap-16" aria-controls="village-1" aria-pressed="false"><span class="village-tab-name">Meterik</span></button><button type="button" class="village-agent village-agent-list body-s" data-agent="Daniel"><span>Ask Daniel</span><svg class="village-agent-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><img src="https://images.unsplash.com/photo-1600679472868-eae382e28b34?auto=format&fit=crop&w=400&h=400&q=75&crop=faces" alt="" loading="lazy"></button></li>
+          <li class="village-item" data-area="maas"><button type="button" class="village-tab flex-row flex-justify-between flex-align-center gap-16" aria-controls="village-2" aria-pressed="false"><span class="village-tab-name">Broekhuizen</span></button><button type="button" class="village-agent village-agent-list body-s" data-agent="Priya"><span>Ask Priya</span><svg class="village-agent-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><img src="https://images.unsplash.com/photo-1630001603446-585f8a8d5527?auto=format&fit=crop&w=400&h=400&q=75&crop=faces" alt="" loading="lazy"></button></li>
+          <li class="village-item" data-area="maas"><button type="button" class="village-tab flex-row flex-justify-between flex-align-center gap-16" aria-controls="village-3" aria-pressed="false"><span class="village-tab-name">Lottum</span></button><button type="button" class="village-agent village-agent-list body-s" data-agent="Priya"><span>Ask Priya</span><svg class="village-agent-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><img src="https://images.unsplash.com/photo-1630001603446-585f8a8d5527?auto=format&fit=crop&w=400&h=400&q=75&crop=faces" alt="" loading="lazy"></button></li>
+          <li class="village-item" data-area="centre"><button type="button" class="village-tab flex-row flex-justify-between flex-align-center gap-16" aria-controls="village-4" aria-pressed="false"><span class="village-tab-name">Sevenum</span></button><button type="button" class="village-agent village-agent-list body-s" data-agent="Marcus"><span>Ask Marcus</span><svg class="village-agent-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><img src="https://images.unsplash.com/photo-1576558656222-ba66febe3dec?auto=format&fit=crop&w=400&h=400&q=75&crop=faces" alt="" loading="lazy"></button></li>
+          <li class="village-item" data-area="maas"><button type="button" class="village-tab flex-row flex-justify-between flex-align-center gap-16" aria-controls="village-5" aria-pressed="false"><span class="village-tab-name">Grubbenvorst</span></button><button type="button" class="village-agent village-agent-list body-s" data-agent="Marcus"><span>Ask Marcus</span><svg class="village-agent-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><img src="https://images.unsplash.com/photo-1576558656222-ba66febe3dec?auto=format&fit=crop&w=400&h=400&q=75&crop=faces" alt="" loading="lazy"></button></li>
+          <li class="village-item" data-area="country"><button type="button" class="village-tab flex-row flex-justify-between flex-align-center gap-16" aria-controls="village-6" aria-pressed="false"><span class="village-tab-name">America</span></button><button type="button" class="village-agent village-agent-list body-s" data-agent="Sofia"><span>Ask Sofia</span><svg class="village-agent-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&h=400&q=75&crop=faces" alt="" loading="lazy"></button></li>
+          <li class="village-item" data-area="country"><button type="button" class="village-tab flex-row flex-justify-between flex-align-center gap-16" aria-controls="village-7" aria-pressed="false"><span class="village-tab-name">Griendtsveen</span></button><button type="button" class="village-agent village-agent-list body-s" data-agent="Sofia"><span>Ask Sofia</span><svg class="village-agent-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&h=400&q=75&crop=faces" alt="" loading="lazy"></button></li>
+        </ul>
+        <div class="village-stage" aria-live="polite">
+          <figure class="village-slide is-active" id="village-0" data-area="centre"><div class="village-main"><img class="village-photo is-shown" src="https://images.unsplash.com/photo-1637062769490-1348bba66653?auto=format&fit=crop&w=1200&q=75" alt="A quiet street with brick houses"><img class="village-photo" src="https://images.unsplash.com/photo-1553941677-2056a6fdb71c?auto=format&fit=crop&w=1200&q=75" alt="A row of brick houses on a cobbled street" loading="lazy"><img class="village-photo" src="https://images.unsplash.com/photo-1767689640932-245e53f10fff?auto=format&fit=crop&w=1200&q=75" alt="A market square with old buildings and cyclists" loading="lazy"><figcaption class="village-caption flex-column gap-8"><h3 class="title-4">Horst</h3><p class="body-m">The centre. Shops, the market and café terraces within walking distance.</p><button type="button" class="village-agent village-ask body-s-strong" data-agent="Daniel"><span>Ask Daniel</span><svg class="village-agent-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><img src="https://images.unsplash.com/photo-1600679472868-eae382e28b34?auto=format&fit=crop&w=400&h=400&q=75&crop=faces" alt="" loading="lazy"></button></figcaption></div><div class="village-thumbs"><button type="button" class="village-thumb media-zoom" aria-pressed="true" aria-label="Photo 1 of 3"><img src="https://images.unsplash.com/photo-1637062769490-1348bba66653?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button><button type="button" class="village-thumb media-zoom" aria-pressed="false" aria-label="Photo 2 of 3"><img src="https://images.unsplash.com/photo-1553941677-2056a6fdb71c?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button><button type="button" class="village-thumb media-zoom" aria-pressed="false" aria-label="Photo 3 of 3"><img src="https://images.unsplash.com/photo-1767689640932-245e53f10fff?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button></div></figure>
+          <figure class="village-slide" id="village-1" data-area="country" aria-hidden="true"><div class="village-main"><img class="village-photo is-shown" src="https://images.unsplash.com/photo-1719679268460-617ef18d4135?auto=format&fit=crop&w=1200&q=75" alt="A brick house behind tall trees on a village lane" loading="lazy"><img class="village-photo" src="https://images.unsplash.com/photo-1674072777658-f8b11b40839d?auto=format&fit=crop&w=1200&q=75" alt="A brick farmhouse in a green field with tall trees" loading="lazy"><img class="village-photo" src="https://images.unsplash.com/photo-1659344187522-6b25822bfb24?auto=format&fit=crop&w=1200&q=75" alt="Cows grazing in a wide green meadow" loading="lazy"><figcaption class="village-caption flex-column gap-8"><h3 class="title-4">Meterik</h3><p class="body-m">Small and green, a short bike ride from Horst.</p><button type="button" class="village-agent village-ask body-s-strong" data-agent="Daniel"><span>Ask Daniel</span><svg class="village-agent-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><img src="https://images.unsplash.com/photo-1600679472868-eae382e28b34?auto=format&fit=crop&w=400&h=400&q=75&crop=faces" alt="" loading="lazy"></button></figcaption></div><div class="village-thumbs"><button type="button" class="village-thumb media-zoom" aria-pressed="true" aria-label="Photo 1 of 3"><img src="https://images.unsplash.com/photo-1719679268460-617ef18d4135?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button><button type="button" class="village-thumb media-zoom" aria-pressed="false" aria-label="Photo 2 of 3"><img src="https://images.unsplash.com/photo-1674072777658-f8b11b40839d?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button><button type="button" class="village-thumb media-zoom" aria-pressed="false" aria-label="Photo 3 of 3"><img src="https://images.unsplash.com/photo-1659344187522-6b25822bfb24?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button></div></figure>
+          <figure class="village-slide" id="village-2" data-area="maas" aria-hidden="true"><div class="village-main"><img class="village-photo is-shown" src="https://images.unsplash.com/photo-1667237804894-90ce08e65ee8?auto=format&fit=crop&w=1200&q=75" alt="The river at sunset with trees along the bank" loading="lazy"><img class="village-photo" src="https://images.unsplash.com/photo-1667239256479-cd378f0d8082?auto=format&fit=crop&w=1200&q=75" alt="Calm water with grass banks and autumn trees" loading="lazy"><img class="village-photo" src="https://images.unsplash.com/photo-1659019553003-3b164a98f7e6?auto=format&fit=crop&w=1200&q=75" alt="A waterway between green fields under a big sky" loading="lazy"><figcaption class="village-caption flex-column gap-8"><h3 class="title-4">Broekhuizen</h3><p class="body-m">Right on the Maas, with the river and the ferry close by.</p><button type="button" class="village-agent village-ask body-s-strong" data-agent="Priya"><span>Ask Priya</span><svg class="village-agent-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><img src="https://images.unsplash.com/photo-1630001603446-585f8a8d5527?auto=format&fit=crop&w=400&h=400&q=75&crop=faces" alt="" loading="lazy"></button></figcaption></div><div class="village-thumbs"><button type="button" class="village-thumb media-zoom" aria-pressed="true" aria-label="Photo 1 of 3"><img src="https://images.unsplash.com/photo-1667237804894-90ce08e65ee8?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button><button type="button" class="village-thumb media-zoom" aria-pressed="false" aria-label="Photo 2 of 3"><img src="https://images.unsplash.com/photo-1667239256479-cd378f0d8082?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button><button type="button" class="village-thumb media-zoom" aria-pressed="false" aria-label="Photo 3 of 3"><img src="https://images.unsplash.com/photo-1659019553003-3b164a98f7e6?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button></div></figure>
+          <figure class="village-slide" id="village-3" data-area="maas" aria-hidden="true"><div class="village-main"><img class="village-photo is-shown" src="https://images.unsplash.com/photo-1785591153800-af53c07542d3?auto=format&fit=crop&w=1200&q=75" alt="An old church between green fields and trees" loading="lazy"><img class="village-photo" src="https://images.unsplash.com/photo-1754238920742-acf4a002313a?auto=format&fit=crop&w=1200&q=75" alt="Pink roses in full bloom" loading="lazy"><img class="village-photo" src="https://images.unsplash.com/photo-1785591153725-a411b41c65ae?auto=format&fit=crop&w=1200&q=75" alt="A church steeple with a Dutch flag above the village and the river" loading="lazy"><figcaption class="village-caption flex-column gap-8"><h3 class="title-4">Lottum</h3><p class="body-m">The rose village, between open fields and the river.</p><button type="button" class="village-agent village-ask body-s-strong" data-agent="Priya"><span>Ask Priya</span><svg class="village-agent-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><img src="https://images.unsplash.com/photo-1630001603446-585f8a8d5527?auto=format&fit=crop&w=400&h=400&q=75&crop=faces" alt="" loading="lazy"></button></figcaption></div><div class="village-thumbs"><button type="button" class="village-thumb media-zoom" aria-pressed="true" aria-label="Photo 1 of 3"><img src="https://images.unsplash.com/photo-1785591153800-af53c07542d3?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button><button type="button" class="village-thumb media-zoom" aria-pressed="false" aria-label="Photo 2 of 3"><img src="https://images.unsplash.com/photo-1754238920742-acf4a002313a?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button><button type="button" class="village-thumb media-zoom" aria-pressed="false" aria-label="Photo 3 of 3"><img src="https://images.unsplash.com/photo-1785591153725-a411b41c65ae?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button></div></figure>
+          <figure class="village-slide" id="village-4" data-area="centre" aria-hidden="true"><div class="village-main"><img class="village-photo is-shown" src="https://images.unsplash.com/photo-1746263667248-e8ab812b24f9?auto=format&fit=crop&w=1200&q=75" alt="People walking and cycling through a sunny village street" loading="lazy"><img class="village-photo" src="https://images.unsplash.com/photo-1580579026987-a06c0f0ea1ea?auto=format&fit=crop&w=1200&q=75" alt="A café with tables outside on a village street" loading="lazy"><img class="village-photo" src="https://images.unsplash.com/photo-1590891966003-37eaa21f6587?auto=format&fit=crop&w=1200&q=75" alt="A cobbled street with a church tower at the end" loading="lazy"><figcaption class="village-caption flex-column gap-8"><h3 class="title-4">Sevenum</h3><p class="body-m">A lively village centre with everything for daily life.</p><button type="button" class="village-agent village-ask body-s-strong" data-agent="Marcus"><span>Ask Marcus</span><svg class="village-agent-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><img src="https://images.unsplash.com/photo-1576558656222-ba66febe3dec?auto=format&fit=crop&w=400&h=400&q=75&crop=faces" alt="" loading="lazy"></button></figcaption></div><div class="village-thumbs"><button type="button" class="village-thumb media-zoom" aria-pressed="true" aria-label="Photo 1 of 3"><img src="https://images.unsplash.com/photo-1746263667248-e8ab812b24f9?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button><button type="button" class="village-thumb media-zoom" aria-pressed="false" aria-label="Photo 2 of 3"><img src="https://images.unsplash.com/photo-1580579026987-a06c0f0ea1ea?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button><button type="button" class="village-thumb media-zoom" aria-pressed="false" aria-label="Photo 3 of 3"><img src="https://images.unsplash.com/photo-1590891966003-37eaa21f6587?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button></div></figure>
+          <figure class="village-slide" id="village-5" data-area="maas" aria-hidden="true"><div class="village-main"><img class="village-photo is-shown" src="https://images.unsplash.com/photo-1684447535623-fab60717e8e4?auto=format&fit=crop&w=1200&q=75" alt="A cobbled street with a church tower behind the houses" loading="lazy"><img class="village-photo" src="https://images.unsplash.com/photo-1684447536169-ba82d2b561ee?auto=format&fit=crop&w=1200&q=75" alt="A church spire above houses and trees" loading="lazy"><img class="village-photo" src="https://images.unsplash.com/photo-1632084698617-56777eac8eed?auto=format&fit=crop&w=1200&q=75" alt="Café tables next to an old stone wall" loading="lazy"><figcaption class="village-caption flex-column gap-8"><h3 class="title-4">Grubbenvorst</h3><p class="body-m">An old village heart near the Maas, and quick to Venlo.</p><button type="button" class="village-agent village-ask body-s-strong" data-agent="Marcus"><span>Ask Marcus</span><svg class="village-agent-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><img src="https://images.unsplash.com/photo-1576558656222-ba66febe3dec?auto=format&fit=crop&w=400&h=400&q=75&crop=faces" alt="" loading="lazy"></button></figcaption></div><div class="village-thumbs"><button type="button" class="village-thumb media-zoom" aria-pressed="true" aria-label="Photo 1 of 3"><img src="https://images.unsplash.com/photo-1684447535623-fab60717e8e4?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button><button type="button" class="village-thumb media-zoom" aria-pressed="false" aria-label="Photo 2 of 3"><img src="https://images.unsplash.com/photo-1684447536169-ba82d2b561ee?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button><button type="button" class="village-thumb media-zoom" aria-pressed="false" aria-label="Photo 3 of 3"><img src="https://images.unsplash.com/photo-1632084698617-56777eac8eed?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button></div></figure>
+          <figure class="village-slide" id="village-6" data-area="country" aria-hidden="true"><div class="village-main"><img class="village-photo is-shown" src="https://images.unsplash.com/photo-1757056819744-343dd995d330?auto=format&fit=crop&w=1200&q=75" alt="A sandy path through blooming heather" loading="lazy"><img class="village-photo" src="https://images.unsplash.com/photo-1724015712330-e898d0a36869?auto=format&fit=crop&w=1200&q=75" alt="A field of purple heather with trees behind it" loading="lazy"><img class="village-photo" src="https://images.unsplash.com/photo-1724520887005-55f0215313dd?auto=format&fit=crop&w=1200&q=75" alt="A wide field of crops with houses at the edge" loading="lazy"><figcaption class="village-caption flex-column gap-8"><h3 class="title-4">America</h3><p class="body-m">Wide fields, with the nature of the Peel on your doorstep.</p><button type="button" class="village-agent village-ask body-s-strong" data-agent="Sofia"><span>Ask Sofia</span><svg class="village-agent-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&h=400&q=75&crop=faces" alt="" loading="lazy"></button></figcaption></div><div class="village-thumbs"><button type="button" class="village-thumb media-zoom" aria-pressed="true" aria-label="Photo 1 of 3"><img src="https://images.unsplash.com/photo-1757056819744-343dd995d330?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button><button type="button" class="village-thumb media-zoom" aria-pressed="false" aria-label="Photo 2 of 3"><img src="https://images.unsplash.com/photo-1724015712330-e898d0a36869?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button><button type="button" class="village-thumb media-zoom" aria-pressed="false" aria-label="Photo 3 of 3"><img src="https://images.unsplash.com/photo-1724520887005-55f0215313dd?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button></div></figure>
+          <figure class="village-slide" id="village-7" data-area="country" aria-hidden="true"><div class="village-main"><img class="village-photo is-shown" src="https://images.unsplash.com/photo-1637062769066-b90291dc7316?auto=format&fit=crop&w=1200&q=75" alt="Red brick houses with gardens on a quiet corner" loading="lazy"><img class="village-photo" src="https://images.unsplash.com/photo-1697879736958-830548fdbb36?auto=format&fit=crop&w=1200&q=75" alt="A wooden boardwalk through a green forest" loading="lazy"><img class="village-photo" src="https://images.unsplash.com/photo-1748442903251-95d863ebafd0?auto=format&fit=crop&w=1200&q=75" alt="A path winding through a dense green forest" loading="lazy"><figcaption class="village-caption flex-column gap-8"><h3 class="title-4">Griendtsveen</h3><p class="body-m">A quiet peat village with nature all around.</p><button type="button" class="village-agent village-ask body-s-strong" data-agent="Sofia"><span>Ask Sofia</span><svg class="village-agent-arrow" aria-hidden="true"><use href="#i-arrow"/></svg><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&h=400&q=75&crop=faces" alt="" loading="lazy"></button></figcaption></div><div class="village-thumbs"><button type="button" class="village-thumb media-zoom" aria-pressed="true" aria-label="Photo 1 of 3"><img src="https://images.unsplash.com/photo-1637062769066-b90291dc7316?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button><button type="button" class="village-thumb media-zoom" aria-pressed="false" aria-label="Photo 2 of 3"><img src="https://images.unsplash.com/photo-1697879736958-830548fdbb36?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button><button type="button" class="village-thumb media-zoom" aria-pressed="false" aria-label="Photo 3 of 3"><img src="https://images.unsplash.com/photo-1748442903251-95d863ebafd0?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></button></div></figure>
+        </div>
+      </div>
+
+      <div class="village-search flex-column gap-16">
+      <h3 class="title-3 heading-on-light use-heading-font">Found your village? Search the homes there.</h3>
+      <form class="hero-search card pad-24 shadow-m" id="home-search" role="search" aria-label="Search homes for sale">
+        <div class="search-field flex-column gap-4">
+          <label class="body-s-strong heading-on-light" for="s-type">Type</label>
+          <select class="field-input" id="s-type">
+            <option value="all">All homes</option>
+            <option value="house">Houses</option>
+            <option value="apartment">Apartments</option>
+          </select>
+        </div>
+        <div class="search-field flex-column gap-4">
+          <label class="body-s-strong heading-on-light" for="s-village">Village</label>
+          <select class="field-input" id="s-village">
+            <option value="">All villages</option>
+            <option>America</option><option>Broekhuizen</option><option>Griendtsveen</option><option>Hegelsom</option><option>Horst</option><option>Kronenberg</option><option>Lottum</option><option>Melderslo</option><option>Sevenum</option>
+          </select>
+        </div>
+        <div class="search-field flex-column gap-4">
+          <label class="body-s-strong heading-on-light" for="s-street">Street</label>
+          <input class="field-input" id="s-street" type="text" placeholder="Any street">
+        </div>
+        <div class="search-field flex-column gap-4">
+          <label class="body-s-strong heading-on-light" for="s-min">Min. price</label>
+          <select class="field-input" id="s-min">
+            <option value="0">No minimum</option><option value="250000">€ 250.000</option><option value="400000">€ 400.000</option><option value="600000">€ 600.000</option>
+          </select>
+        </div>
+        <div class="search-field flex-column gap-4">
+          <label class="body-s-strong heading-on-light" for="s-max">Max. price</label>
+          <select class="field-input" id="s-max">
+            <option value="0">No maximum</option><option value="300000">€ 300.000</option><option value="500000">€ 500.000</option><option value="750000">€ 750.000</option>
+          </select>
+        </div>
+        <button class="btn-solid search-button" type="submit"><svg class="btn-icon-lead" aria-hidden="true"><use href="#i-search"/></svg>Search</button>
+      </form>
+    </div>
+    </section>
+
+    <!-- 5. HOMES FOR SALE: carousel that moves on its own, pauses on hover -->
+    <section id="homes" class="bg-homes boxed-l pad-tb-128 flex-column gap-40" aria-labelledby="homes-title">
+      <div class="section-head flex-row flex-wrap flex-justify-between flex-align-end gap-24">
+        <div class="flex-column gap-20 head-text">
+          <p class="sub-title subtitle-on-light"><svg class="eyebrow-icon" aria-hidden="true"><use href="#i-houses"/></svg><span>For sale now</span></p>
+          <h2 id="homes-title" class="title-2 heading-on-light">Homes we are selling right now</h2>
+        </div>
+        <div class="flex-row flex-wrap flex-align-center gap-16">
+          <div class="filter flex-row gap-8" role="radiogroup" aria-label="Filter homes">
+            <input class="filter-input" type="radio" name="home-filter" id="f-all" value="all" checked>
+            <label class="filter-chip body-s" for="f-all">All homes</label>
+            <input class="filter-input" type="radio" name="home-filter" id="f-house" value="house">
+            <label class="filter-chip body-s" for="f-house">Houses</label>
+            <input class="filter-input" type="radio" name="home-filter" id="f-apartment" value="apartment">
+            <label class="filter-chip body-s" for="f-apartment">Apartments</label>
+          </div>
+          <div class="carousel-arrows flex-row gap-8">
+            <button class="carousel-arrow" type="button" data-prev aria-label="Previous homes"><svg class="meta-icon arrow-back" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <button class="carousel-arrow" type="button" data-next-slide aria-label="Next homes"><svg class="meta-icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel" data-carousel>
+        <ul class="carousel-track" role="list">
+        <li class="home-card card" data-type="house" data-village="Horst" data-price="495000" data-street="Gasthuisstraat">
+          <a class="home-card-link flex-column" href="property.html">
+            <div class="home-card-photos">
+              <div class="media-zoom home-card-main"><img src="https://images.unsplash.com/photo-1601152833038-db3ed4923f61?auto=format&fit=crop&w=800&q=75" alt="Village Home, Gasthuisstraat, Horst" loading="lazy"><span class="badge-2 home-card-badge">For sale</span></div>
+              <div class="home-card-thumbs thumbs-3"><div class="media-zoom"><img src="https://images.unsplash.com/photo-1772797583328-f83bc3f94f80?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div><div class="media-zoom"><img src="https://images.unsplash.com/photo-1585128833500-ec98262cb4f5?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div><div class="media-zoom"><img src="https://images.unsplash.com/photo-1662236337008-e546a2359f45?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div>
+            </div>
+            <div class="home-card-body pad-24 flex-column gap-4">
+              <h3 class="title-6 heading-on-light">Village Home</h3>
+              <p class="body-s detail-on-light">Gasthuisstraat, Horst · Terraced house</p>
+              <p class="title-6 subtitle-on-light use-heading-font home-card-price">€ 495.000 <span class="body-s detail-on-light use-body-font">k.k.</span></p>
+            </div>
+            <ul class="home-card-facts flex-row flex-justify-center gap-24 body-s heading-on-light" role="list">
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-area"/></svg>195 m²</li>
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-bed"/></svg>3</li>
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-bath"/></svg>2</li>
+            </ul>
+          </a>
+        </li>
+        <li class="home-card card" data-type="house" data-village="Broekhuizen" data-price="575000" data-street="Veerweg">
+          <a class="home-card-link flex-column" href="property.html">
+            <div class="home-card-photos">
+              <div class="media-zoom home-card-main"><img src="https://images.unsplash.com/photo-1779982618640-87977d0b7a37?auto=format&fit=crop&w=800&q=75" alt="Riverside Classic, Veerweg, Broekhuizen" loading="lazy"><span class="badge-2 home-card-badge">For sale</span></div>
+              <div class="home-card-thumbs thumbs-3"><div class="media-zoom"><img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div><div class="media-zoom"><img src="https://images.unsplash.com/photo-1657040899594-34f4b6739988?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div><div class="media-zoom"><img src="https://images.unsplash.com/photo-1585128903994-9788298932a6?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div>
+            </div>
+            <div class="home-card-body pad-24 flex-column gap-4">
+              <h3 class="title-6 heading-on-light">Riverside Classic</h3>
+              <p class="body-s detail-on-light">Veerweg, Broekhuizen · Village house</p>
+              <p class="title-6 subtitle-on-light use-heading-font home-card-price">€ 575.000 <span class="body-s detail-on-light use-body-font">k.k.</span></p>
+            </div>
+            <ul class="home-card-facts flex-row flex-justify-center gap-24 body-s heading-on-light" role="list">
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-area"/></svg>172 m²</li>
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-bed"/></svg>3</li>
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-bath"/></svg>2</li>
+            </ul>
+          </a>
+        </li>
+        <li class="home-card card" data-type="apartment" data-village="Sevenum" data-price="395000" data-street="Kerkstraat">
+          <a class="home-card-link flex-column" href="property.html">
+            <div class="home-card-photos">
+              <div class="media-zoom home-card-main"><img src="https://images.unsplash.com/photo-1754473818008-3a19e590ecce?auto=format&fit=crop&w=800&q=75" alt="Sevenum Centre Residence, Kerkstraat, Sevenum" loading="lazy"><span class="badge-2 home-card-badge">For sale</span></div>
+              <div class="home-card-thumbs thumbs-3"><div class="media-zoom"><img src="https://images.unsplash.com/photo-1747336754870-ca7b10cc75f5?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div><div class="media-zoom"><img src="https://images.unsplash.com/photo-1643949700215-e61cdca053f7?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div><div class="media-zoom"><img src="https://images.unsplash.com/photo-1585128903994-9788298932a6?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div>
+            </div>
+            <div class="home-card-body pad-24 flex-column gap-4">
+              <h3 class="title-6 heading-on-light">Sevenum Centre Residence</h3>
+              <p class="body-s detail-on-light">Kerkstraat, Sevenum · Apartment</p>
+              <p class="title-6 subtitle-on-light use-heading-font home-card-price">€ 395.000 <span class="body-s detail-on-light use-body-font">k.k.</span></p>
+            </div>
+            <ul class="home-card-facts flex-row flex-justify-center gap-24 body-s heading-on-light" role="list">
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-area"/></svg>116 m²</li>
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-bed"/></svg>2</li>
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-bath"/></svg>2</li>
+            </ul>
+          </a>
+        </li>
+        <li class="home-card card" data-type="house" data-village="Melderslo" data-price="895000" data-street="Broekhuizerdijk">
+          <a class="home-card-link flex-column" href="property.html">
+            <div class="home-card-photos">
+              <div class="media-zoom home-card-main"><img src="https://images.unsplash.com/photo-1675954762355-a66c031c420b?auto=format&fit=crop&w=800&q=75" alt="Melderslo Country House, Broekhuizerdijk, Melderslo" loading="lazy"><span class="badge-2 home-card-badge">For sale</span></div>
+              <div class="home-card-thumbs thumbs-3"><div class="media-zoom"><img src="https://images.unsplash.com/photo-1585128903994-9788298932a6?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div><div class="media-zoom"><img src="https://images.unsplash.com/photo-1662236337008-e546a2359f45?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div><div class="media-zoom"><img src="https://images.unsplash.com/photo-1657040899594-34f4b6739988?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div>
+            </div>
+            <div class="home-card-body pad-24 flex-column gap-4">
+              <h3 class="title-6 heading-on-light">Melderslo Country House</h3>
+              <p class="body-s detail-on-light">Broekhuizerdijk, Melderslo · Detached house</p>
+              <p class="title-6 subtitle-on-light use-heading-font home-card-price">€ 895.000 <span class="body-s detail-on-light use-body-font">k.k.</span></p>
+            </div>
+            <ul class="home-card-facts flex-row flex-justify-center gap-24 body-s heading-on-light" role="list">
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-area"/></svg>334 m²</li>
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-bed"/></svg>5</li>
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-bath"/></svg>3</li>
+            </ul>
+          </a>
+        </li>
+        <li class="home-card card" data-type="house" data-village="America" data-price="975000" data-street="Pastoor Jeukenstraat">
+          <a class="home-card-link flex-column" href="property.html">
+            <div class="home-card-photos">
+              <div class="media-zoom home-card-main"><img src="https://images.unsplash.com/photo-1779983646041-1eef6de0f34a?auto=format&fit=crop&w=800&q=75" alt="America Country House, Pastoor Jeukenstraat, America" loading="lazy"><span class="badge-2 home-card-badge">For sale</span></div>
+              <div class="home-card-thumbs thumbs-3"><div class="media-zoom"><img src="https://images.unsplash.com/photo-1772797583328-f83bc3f94f80?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div><div class="media-zoom"><img src="https://images.unsplash.com/photo-1585128833500-ec98262cb4f5?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div><div class="media-zoom"><img src="https://images.unsplash.com/photo-1643949700215-e61cdca053f7?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div>
+            </div>
+            <div class="home-card-body pad-24 flex-column gap-4">
+              <h3 class="title-6 heading-on-light">America Country House</h3>
+              <p class="body-s detail-on-light">Pastoor Jeukenstraat, America · Detached house</p>
+              <p class="title-6 subtitle-on-light use-heading-font home-card-price">€ 975.000 <span class="body-s detail-on-light use-body-font">k.k.</span></p>
+            </div>
+            <ul class="home-card-facts flex-row flex-justify-center gap-24 body-s heading-on-light" role="list">
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-area"/></svg>297 m²</li>
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-bed"/></svg>4</li>
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-bath"/></svg>4</li>
+            </ul>
+          </a>
+        </li>
+        <li class="home-card card" data-type="house" data-village="Griendtsveen" data-price="475000" data-street="Helenaveenseweg">
+          <a class="home-card-link flex-column" href="property.html">
+            <div class="home-card-photos">
+              <div class="media-zoom home-card-main"><img src="https://images.unsplash.com/photo-1603917801094-9b603f226259?auto=format&fit=crop&w=800&q=75" alt="Peel Village Home, Helenaveenseweg, Griendtsveen" loading="lazy"><span class="badge-2 home-card-badge">For sale</span></div>
+              <div class="home-card-thumbs thumbs-3"><div class="media-zoom"><img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div><div class="media-zoom"><img src="https://images.unsplash.com/photo-1662236337008-e546a2359f45?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div><div class="media-zoom"><img src="https://images.unsplash.com/photo-1585128903994-9788298932a6?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div>
+            </div>
+            <div class="home-card-body pad-24 flex-column gap-4">
+              <h3 class="title-6 heading-on-light">Peel Village Home</h3>
+              <p class="body-s detail-on-light">Helenaveenseweg, Griendtsveen · Semi-detached house</p>
+              <p class="title-6 subtitle-on-light use-heading-font home-card-price">€ 475.000 <span class="body-s detail-on-light use-body-font">k.k.</span></p>
+            </div>
+            <ul class="home-card-facts flex-row flex-justify-center gap-24 body-s heading-on-light" role="list">
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-area"/></svg>144 m²</li>
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-bed"/></svg>2</li>
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-bath"/></svg>2</li>
+            </ul>
+          </a>
+        </li>
+        <li class="home-card card" data-type="apartment" data-village="Hegelsom" data-price="275000" data-street="Stationsstraat">
+          <a class="home-card-link flex-column" href="property.html">
+            <div class="home-card-photos">
+              <div class="media-zoom home-card-main"><img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=800&q=75" alt="Hegelsom Apartment, Stationsstraat, Hegelsom" loading="lazy"><span class="badge-2 home-card-badge">For sale</span></div>
+              <div class="home-card-thumbs thumbs-3"><div class="media-zoom"><img src="https://images.unsplash.com/photo-1585128833500-ec98262cb4f5?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div><div class="media-zoom"><img src="https://images.unsplash.com/photo-1657040899594-34f4b6739988?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div><div class="media-zoom"><img src="https://images.unsplash.com/photo-1585128903994-9788298932a6?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div>
+            </div>
+            <div class="home-card-body pad-24 flex-column gap-4">
+              <h3 class="title-6 heading-on-light">Hegelsom Apartment</h3>
+              <p class="body-s detail-on-light">Stationsstraat, Hegelsom · Apartment</p>
+              <p class="title-6 subtitle-on-light use-heading-font home-card-price">€ 275.000 <span class="body-s detail-on-light use-body-font">k.k.</span></p>
+            </div>
+            <ul class="home-card-facts flex-row flex-justify-center gap-24 body-s heading-on-light" role="list">
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-area"/></svg>72 m²</li>
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-bed"/></svg>1</li>
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-bath"/></svg>1</li>
+            </ul>
+          </a>
+        </li>
+        <li class="home-card card" data-type="apartment" data-village="Lottum" data-price="425000" data-street="Hoofdstraat">
+          <a class="home-card-link flex-column" href="property.html">
+            <div class="home-card-photos">
+              <div class="media-zoom home-card-main"><img src="https://images.unsplash.com/photo-1772797583328-f83bc3f94f80?auto=format&fit=crop&w=800&q=75" alt="Village View Residence, Hoofdstraat, Lottum" loading="lazy"><span class="badge-3 home-card-badge">Under contract</span></div>
+              <div class="home-card-thumbs thumbs-3"><div class="media-zoom"><img src="https://images.unsplash.com/photo-1585128903994-9788298932a6?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div><div class="media-zoom"><img src="https://images.unsplash.com/photo-1643949700215-e61cdca053f7?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div><div class="media-zoom"><img src="https://images.unsplash.com/photo-1662236337008-e546a2359f45?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div>
+            </div>
+            <div class="home-card-body pad-24 flex-column gap-4">
+              <h3 class="title-6 heading-on-light">Village View Residence</h3>
+              <p class="body-s detail-on-light">Hoofdstraat, Lottum · Apartment</p>
+              <p class="title-6 subtitle-on-light use-heading-font home-card-price">€ 425.000 <span class="body-s detail-on-light use-body-font">k.k.</span></p>
+            </div>
+            <ul class="home-card-facts flex-row flex-justify-center gap-24 body-s heading-on-light" role="list">
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-area"/></svg>130 m²</li>
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-bed"/></svg>2</li>
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-bath"/></svg>2</li>
+            </ul>
+          </a>
+        </li>
+        <li class="home-card card" data-type="apartment" data-village="Kronenberg" data-price="249000" data-street="Peelstraat">
+          <a class="home-card-link flex-column" href="property.html">
+            <div class="home-card-photos">
+              <div class="media-zoom home-card-main"><img src="https://images.unsplash.com/photo-1747336754870-ca7b10cc75f5?auto=format&fit=crop&w=800&q=75" alt="Kronenberg Apartment, Peelstraat, Kronenberg" loading="lazy"><span class="badge-2 home-card-badge">For sale</span></div>
+              <div class="home-card-thumbs thumbs-3"><div class="media-zoom"><img src="https://images.unsplash.com/photo-1657040899594-34f4b6739988?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div><div class="media-zoom"><img src="https://images.unsplash.com/photo-1585128833500-ec98262cb4f5?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div><div class="media-zoom"><img src="https://images.unsplash.com/photo-1585128903994-9788298932a6?auto=format&fit=crop&w=360&q=75" alt="" loading="lazy"></div>
+            </div>
+            <div class="home-card-body pad-24 flex-column gap-4">
+              <h3 class="title-6 heading-on-light">Kronenberg Apartment</h3>
+              <p class="body-s detail-on-light">Peelstraat, Kronenberg · Apartment</p>
+              <p class="title-6 subtitle-on-light use-heading-font home-card-price">€ 249.000 <span class="body-s detail-on-light use-body-font">k.k.</span></p>
+            </div>
+            <ul class="home-card-facts flex-row flex-justify-center gap-24 body-s heading-on-light" role="list">
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-area"/></svg>65 m²</li>
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-bed"/></svg>1</li>
+              <li class="flex-row flex-align-center gap-8"><svg class="meta-icon" aria-hidden="true"><use href="#i-bath"/></svg>1</li>
+            </ul>
+          </a>
+        </li>
+        </ul>
+        <p class="search-empty body-m text-center" hidden>No homes match this search right now. <button class="text-link link-on-light btn-reset body-m" type="button" data-clear-search>Show all homes</button></p>
+        <div class="carousel-dots flex-row flex-justify-center gap-8" aria-hidden="true"></div>
+      </div>
+
+      <!-- New homes by WhatsApp -->
+      <div id="alerts" class="alert-banner bg-dark-1 dark-surface rounded-m pad-40 body-on-dark">
+        <svg class="alert-icon" aria-hidden="true"><use href="#i-house-search"/></svg>
+        <div class="flex-column gap-8 alert-text">
+          <h3 class="title-4 heading-on-dark">Be the first to hear about new homes</h3>
+          <p class="body-m">Get a WhatsApp message before a home appears on the big portals. Free, and you can stop at any time.</p>
+        </div>
+        <form class="alert-form flex-row flex-wrap gap-12" id="alert-form" novalidate>
+          <label class="hidden" for="a-phone">Your mobile number</label>
+          <input class="field-input alert-input" id="a-phone" type="tel" autocomplete="tel" placeholder="Your mobile number" required>
+          <button class="btn-solid-on-dark" type="submit">Sign me up</button>
+          <p class="alert-done body-m heading-on-dark flex-row flex-align-center gap-8" hidden><svg class="meta-icon" aria-hidden="true"><use href="#i-check"/></svg>You are on the list.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- 6. TEAM: real people with direct lines -->
+    <section id="team" class="bg-light-2 boxed-m pad-tb-128" aria-labelledby="team-title">
+      <div class="team-layout">
+        <div class="team-intro flex-column gap-24">
+          <p class="sub-title subtitle-on-light"><svg class="eyebrow-icon" aria-hidden="true"><use href="#i-houses"/></svg><span>Our team</span></p>
+          <h2 id="team-title" class="title-2 heading-on-light">The people who pick up the phone</h2>
+          <figure class="founder">
+            <blockquote class="heading-on-light quote-hand founder-quote">“I left a big firm because clients were passed around. Here, one agent stays with you from the first coffee to the closing.”</blockquote>
+            <div class="founder-person flex-row flex-align-end gap-20">
+              <div class="founder-photo-wrap"><img class="founder-photo" src="assets/claire-cutout.webp" alt="Claire Morgan" width="600" height="741" loading="lazy"></div>
+              <figcaption class="flex-column founder-name"><span class="body-m-strong heading-on-light">Claire Morgan</span><span class="body-s detail-on-light">Founder and managing director</span></figcaption>
+            </div>
+          </figure>
+        </div>
+        <div class="team-ring flex-column gap-24" data-ring>
+          <div class="ring-stage">
+            <ul class="ring" role="list" aria-label="Our team">
+            <li class="ring-card card flex-column" data-bio="Claire started Larkline nine years ago, after years at a big firm in Venlo. She still takes on her own clients in every village, and she pours the coffee at the office.">
+              <img class="ring-photo" src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&h=400&q=75&crop=faces" alt="Claire Morgan" loading="lazy" draggable="false">
+              <div class="ring-body flex-column gap-4">
+                <h3 class="title-5 heading-on-light">Claire Morgan</h3>
+                <p class="body-s detail-on-light">Founder · All villages</p>
+                <div class="agent-actions flex-row flex-wrap gap-16">
+                  <a class="icon-link body-s link-on-light" href="tel:+31775550100"><svg class="meta-icon" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+                  <a class="icon-link body-s link-on-light" href="https://wa.me/31612340110"><svg class="meta-icon" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</a>
+                  <a class="icon-link body-s link-on-light" href="mailto:claire@larkline.example"><svg class="meta-icon" aria-hidden="true"><use href="#i-mail"/></svg>Email</a>
+                </div>
+              </div>
+            </li>
+            <li class="ring-card card flex-column" data-bio="Daniel grew up in Hegelsom and has sold homes in and around Horst for fifteen years. He knows which streets flood after heavy rain and which ones get the evening sun.">
+              <img class="ring-photo" src="https://images.unsplash.com/photo-1600679472868-eae382e28b34?auto=format&fit=crop&w=400&h=400&q=75&crop=faces" alt="Daniel Reyes" loading="lazy" draggable="false">
+              <div class="ring-body flex-column gap-4">
+                <h3 class="title-5 heading-on-light">Daniel Reyes</h3>
+                <p class="body-s detail-on-light">Senior agent · Horst, Meterik, Hegelsom</p>
+                <div class="agent-actions flex-row flex-wrap gap-16">
+                  <a class="icon-link body-s link-on-light" href="tel:+31775550101"><svg class="meta-icon" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+                  <a class="icon-link body-s link-on-light" href="https://wa.me/31612340111"><svg class="meta-icon" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</a>
+                  <a class="icon-link body-s link-on-light" href="mailto:daniel@larkline.example"><svg class="meta-icon" aria-hidden="true"><use href="#i-mail"/></svg>Email</a>
+                </div>
+              </div>
+            </li>
+            <li class="ring-card card flex-column" data-bio="Priya lives in Lottum, two streets from the Maas. She handles the river villages and answers WhatsApp messages faster than anyone in the office.">
+              <img class="ring-photo" src="https://images.unsplash.com/photo-1630001603446-585f8a8d5527?auto=format&fit=crop&w=400&h=400&q=75&crop=faces" alt="Priya Nair" loading="lazy" draggable="false">
+              <div class="ring-body flex-column gap-4">
+                <h3 class="title-5 heading-on-light">Priya Nair</h3>
+                <p class="body-s detail-on-light">Senior agent · Broekhuizen, Lottum, Broekhuizenvorst</p>
+                <div class="agent-actions flex-row flex-wrap gap-16">
+                  <a class="icon-link body-s link-on-light" href="tel:+31775550102"><svg class="meta-icon" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+                  <a class="icon-link body-s link-on-light" href="https://wa.me/31612340112"><svg class="meta-icon" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</a>
+                  <a class="icon-link body-s link-on-light" href="mailto:priya@larkline.example"><svg class="meta-icon" aria-hidden="true"><use href="#i-mail"/></svg>Email</a>
+                </div>
+              </div>
+            </li>
+            <li class="ring-card card flex-column" data-bio="Marcus moved to Sevenum for the space and stayed for the people. He specialises in family homes and first-time buyers.">
+              <img class="ring-photo" src="https://images.unsplash.com/photo-1576558656222-ba66febe3dec?auto=format&fit=crop&w=400&h=400&q=75&crop=faces" alt="Marcus Bell" loading="lazy" draggable="false">
+              <div class="ring-body flex-column gap-4">
+                <h3 class="title-5 heading-on-light">Marcus Bell</h3>
+                <p class="body-s detail-on-light">Agent · Sevenum, Grubbenvorst, Melderslo</p>
+                <div class="agent-actions flex-row flex-wrap gap-16">
+                  <a class="icon-link body-s link-on-light" href="tel:+31775550103"><svg class="meta-icon" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+                  <a class="icon-link body-s link-on-light" href="https://wa.me/31612340113"><svg class="meta-icon" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</a>
+                  <a class="icon-link body-s link-on-light" href="mailto:marcus@larkline.example"><svg class="meta-icon" aria-hidden="true"><use href="#i-mail"/></svg>Email</a>
+                </div>
+              </div>
+            </li>
+            <li class="ring-card card flex-column" data-bio="Sofia covers the quiet villages near the Peel. She is the one to ask about old farmhouses, large plots and living close to nature.">
+              <img class="ring-photo" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&h=400&q=75&crop=faces" alt="Sofia Lindqvist" loading="lazy" draggable="false">
+              <div class="ring-body flex-column gap-4">
+                <h3 class="title-5 heading-on-light">Sofia Lindqvist</h3>
+                <p class="body-s detail-on-light">Agent · America, Griendtsveen, Kronenberg</p>
+                <div class="agent-actions flex-row flex-wrap gap-16">
+                  <a class="icon-link body-s link-on-light" href="tel:+31775550104"><svg class="meta-icon" aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+                  <a class="icon-link body-s link-on-light" href="https://wa.me/31612340114"><svg class="meta-icon" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</a>
+                  <a class="icon-link body-s link-on-light" href="mailto:sofia@larkline.example"><svg class="meta-icon" aria-hidden="true"><use href="#i-mail"/></svg>Email</a>
+                </div>
+              </div>
+            </li>
+            </ul>
+          </div>
+          <div class="ring-controls flex-row flex-justify-center gap-8">
+            <button class="carousel-arrow" type="button" data-ring-prev aria-label="Previous person"><svg class="meta-icon arrow-back" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <button class="carousel-arrow" type="button" data-ring-pause aria-label="Pause the turning" aria-pressed="false"><svg class="meta-icon" aria-hidden="true"><use href="#i-pause"/></svg></button>
+            <button class="carousel-arrow" type="button" data-ring-next aria-label="Next person"><svg class="meta-icon" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+          <p class="body-s detail-on-light text-center click-hint">Click a card to see the whole person.</p>
+        </div>
+      </div>
+      <dialog class="agent-dialog" aria-labelledby="agent-dialog-name">
+        <div class="agent-dialog-card card">
+          <img class="agent-dialog-photo" src="" alt="">
+          <div class="agent-dialog-body flex-column gap-16">
+            <button class="agent-dialog-back body-s flex-row flex-align-center gap-8" type="button" data-dialog-back><svg class="meta-icon arrow-back" aria-hidden="true"><use href="#i-arrow"/></svg>Back to the team</button>
+            <h3 id="agent-dialog-name" class="title-3 heading-on-light"></h3>
+            <p class="body-m detail-on-light agent-dialog-role"></p>
+            <p class="body-m agent-dialog-bio"></p>
+            <div class="agent-dialog-actions flex-row flex-wrap gap-12"></div>
+          </div>
+        </div>
+      </dialog>
+    </section>
+
+    <!-- 7. VALUATION: proof right next to the action -->
+    <section id="valuation" class="bg-dark-1 dark-surface boxed-m pad-tb-128 body-on-dark" aria-labelledby="valuation-title">
+      <div class="valuation-layout">
+        <div class="flex-column gap-32">
+          <div class="flex-column gap-24">
+            <p class="sub-title subtitle-on-dark"><svg class="eyebrow-icon" aria-hidden="true"><use href="#i-houses"/></svg><span>Free valuation</span></p>
+            <h2 id="valuation-title" class="title-2 heading-on-dark">What is your home worth?</h2>
+            <p class="body-l">Tell us where you live. The agent for your village comes by, looks at your home and the street, and gives you an honest price. No cost, no obligation.</p>
+          </div>
+          <!-- SAMPLE REVIEW: replace with a real client review before launch -->
+          <figure class="review flex-column gap-16">
+            <p class="sub-title detail-on-dark"><svg class="eyebrow-icon" aria-hidden="true"><use href="#i-houses"/></svg><span >Sample review</span></p>
+            <blockquote class="heading-on-dark quote-hand">“Priya knew our street better than we did. She answered every WhatsApp, even on a Saturday.”</blockquote>
+            <figcaption class="body-s detail-on-dark">Seller in Broekhuizen</figcaption>
+          </figure>
+        </div>
+
+        <form class="valuation-form card pad-40 flex-column gap-24 shadow-l body-on-light" id="valuation-form" novalidate>
+          <div class="form-progress flex-row flex-align-center gap-12" aria-hidden="true">
+            <span class="progress-dot is-active"></span><span class="progress-line"></span><span class="progress-dot"></span>
+          </div>
+
+          <fieldset class="form-step flex-column gap-20" data-step="1">
+            <legend class="title-5 heading-on-light form-legend">Your home <span class="body-s detail-on-light">Step 1 of 2</span></legend>
+            <div class="field flex-column gap-8">
+              <label class="body-s-strong heading-on-light" for="v-address">Street and house number</label>
+              <input class="field-input" id="v-address" name="address" type="text" autocomplete="street-address" placeholder="For example Kerkstraat 12" required>
+              <p class="field-error body-s" id="v-address-error">Please fill in your street and house number.</p>
+            </div>
+            <div class="form-row gap-16">
+              <div class="field flex-column gap-8">
+                <label class="body-s-strong heading-on-light" for="v-village">Village</label>
+                <select class="field-input" id="v-village" name="village" required>
+                  <option value="">Choose a village</option>
+                  <option data-agent="Daniel">Horst</option>
+                  <option data-agent="Daniel">Meterik</option>
+                  <option data-agent="Daniel">Hegelsom</option>
+                  <option data-agent="Priya">Broekhuizen</option>
+                  <option data-agent="Priya">Broekhuizenvorst</option>
+                  <option data-agent="Priya">Lottum</option>
+                  <option data-agent="Marcus">Sevenum</option>
+                  <option data-agent="Marcus">Grubbenvorst</option>
+                  <option data-agent="Marcus">Melderslo</option>
+                  <option data-agent="Sofia">America</option>
+                  <option data-agent="Sofia">Griendtsveen</option>
+                  <option data-agent="Sofia">Kronenberg</option>
+                  <option data-agent="Claire">Another village</option>
+                </select>
+                <p class="field-error body-s">Please choose your village.</p>
+              </div>
+              <div class="field flex-column gap-8">
+                <label class="body-s-strong heading-on-light" for="v-type">Type of home</label>
+                <select class="field-input" id="v-type" name="type" required>
+                  <option value="">Choose a type</option>
+                  <option>Terraced house</option>
+                  <option>Semi-detached house</option>
+                  <option>Detached house</option>
+                  <option>Apartment</option>
+                  <option>Village house or farmhouse</option>
+                </select>
+                <p class="field-error body-s">Please choose a type.</p>
+              </div>
+            </div>
+            <div><button class="btn-solid" type="button" data-next>Next: your details <svg class="btn-icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+          </fieldset>
+
+          <fieldset class="form-step flex-column gap-20" data-step="2" hidden>
+            <legend class="title-5 heading-on-light form-legend">How can we reach you? <span class="body-s detail-on-light">Step 2 of 2</span></legend>
+            <div class="field flex-column gap-8">
+              <label class="body-s-strong heading-on-light" for="v-name">Your name</label>
+              <input class="field-input" id="v-name" name="name" type="text" autocomplete="name" required>
+              <p class="field-error body-s">Please fill in your name.</p>
+            </div>
+            <div class="form-row gap-16">
+              <div class="field flex-column gap-8">
+                <label class="body-s-strong heading-on-light" for="v-phone">Phone</label>
+                <input class="field-input" id="v-phone" name="phone" type="tel" autocomplete="tel" required>
+                <p class="field-error body-s">Please fill in a phone number.</p>
+              </div>
+              <div class="field flex-column gap-8">
+                <label class="body-s-strong heading-on-light" for="v-email">Email</label>
+                <input class="field-input" id="v-email" name="email" type="email" autocomplete="email" required>
+                <p class="field-error body-s">Please fill in a valid email address.</p>
+              </div>
+            </div>
+            <div class="field consent-field flex-column gap-8">
+              <label class="consent body-s" for="v-consent">
+                <input class="field-check" id="v-consent" name="consent" type="checkbox" required>
+                <span>I agree that Larkline uses my details only to contact me about this valuation. Read our <a class="text-link link-on-light" href="#privacy">privacy policy</a>.</span>
+              </label>
+              <p class="field-error body-s">Please tick the box, so we may contact you.</p>
+            </div>
+            <div class="form-actions flex-row flex-wrap flex-align-center gap-12">
+              <button class="btn-outline" type="button" data-back><svg class="btn-icon arrow-back" aria-hidden="true"><use href="#i-arrow"/></svg>Back</button>
+              <button class="btn-solid" type="submit">Send my request</button>
+            </div>
+          </fieldset>
+
+          <div class="form-done flex-column gap-20" hidden tabindex="-1">
+            <svg class="done-icon" aria-hidden="true"><use href="#i-check"/></svg>
+            <h3 class="title-4 heading-on-light">Thank you, <span data-out="name">we have it</span>.</h3>
+            <p class="body-m">Your request has been sent. <span data-out="agent">Your agent</span> will call you to plan a visit. Your request is logged, so it will not get lost in an inbox.</p>
+            <dl class="done-summary body-s">
+              <dt class="detail-on-light">Home</dt><dd data-out="home"></dd>
+              <dt class="detail-on-light">We call you on</dt><dd data-out="phone"></dd>
+              <dt class="detail-on-light">Confirmation sent to</dt><dd data-out="email"></dd>
+            </dl>
+            <div><button class="btn-outline" type="button" data-again>Send another request</button></div>
+          </div>
+
+          <p class="body-s detail-on-light form-note">Rather call? <a class="text-link link-on-light" href="tel:+31775550100">+31 77 555 0100</a></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- 8. FAQ: questions in three tabs -->
+    <section id="faq" class="bg-light-1 boxed-m pad-tb-128" aria-labelledby="faq-title">
+      <div class="faq-head">
+        <div class="flex-column gap-20">
+          <p class="sub-title subtitle-on-light"><svg class="eyebrow-icon" aria-hidden="true"><use href="#i-houses"/></svg><span>Questions</span></p>
+          <h2 id="faq-title" class="title-3 heading-on-light">Your questions, answered at the kitchen table</h2>
+          <p class="body-m faq-intro">The questions we hear most, in plain words. Not here? Send us a WhatsApp and your agent answers.</p>
+        </div>
+        <a class="btn-solid faq-contact" href="https://wa.me/31612340110">Ask your question</a>
+      </div>
+      <div class="faq-tabs" role="tablist" aria-label="Question topics">
+        <button class="faq-tab body-s" role="tab" id="faq-tab-buying" aria-controls="faq-buying" aria-selected="true" type="button">Buying</button>
+        <button class="faq-tab body-s" role="tab" id="faq-tab-selling" aria-controls="faq-selling" aria-selected="false" type="button">Selling</button>
+        <button class="faq-tab body-s" role="tab" id="faq-tab-villages" aria-controls="faq-villages" aria-selected="false" type="button">Villages</button>
+      </div>
+      <div class="faq-panel" id="faq-buying" role="tabpanel" aria-labelledby="faq-tab-buying">
+        <ul class="faq-grid" role="list">
+            <li class="faq-item is-featured">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">Do I always get the same agent?</h3>
+              <p class="body-s faq-a">Yes. One agent stays with you from the first viewing to the notary. You get their own mobile number and WhatsApp.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">How do I hear about new homes first?</h3>
+              <p class="body-s faq-a">Sign up for WhatsApp alerts. You get a message before a home appears on the big portals. Free, and you can stop at any time.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">Can you help me buy a home you do not sell?</h3>
+              <p class="body-s faq-a">Yes. Your agent can guide you as a buying agent, check the price and the house, and negotiate for you.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">Can I view a home in the evening or on Saturday?</h3>
+              <p class="body-s faq-a">Often, yes. Ask your agent. We plan viewings around your working day, not ours.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">What should I arrange before I make an offer?</h3>
+              <p class="body-s faq-a">Know your budget. A talk with a mortgage advisor first makes your offer stronger and saves you stress later.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">Do you also rent out homes?</h3>
+              <p class="body-s faq-a">No. We only help people buy and sell homes. That is all we do, so we can do it well.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">Can you tell me about a street before I buy?</h3>
+              <p class="body-s faq-a">Yes. Our agents live here. They tell you honestly about noise, schools, traffic and the neighbours.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">How long does buying take?</h3>
+              <p class="body-s faq-a">From an accepted offer to the notary usually takes two to three months. Your agent keeps you up to date at every step.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">Can I call outside office hours?</h3>
+              <p class="body-s faq-a">You can always send a WhatsApp. Your agent answers as soon as they can, also in the evening.</p>
+            </li>
+        </ul>
+      </div>
+      <div class="faq-panel" id="faq-selling" role="tabpanel" aria-labelledby="faq-tab-selling" hidden>
+        <ul class="faq-grid" role="list">
+            <li class="faq-item is-featured">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">What does a valuation cost?</h3>
+              <p class="body-s faq-a">Nothing. The agent for your village comes by, looks at your home and the street, and gives you an honest price. No obligation.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">Who sells my home?</h3>
+              <p class="body-s faq-a">The same agent who valued it. You will not be handed to a colleague you have never met.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">How do you set the asking price?</h3>
+              <p class="body-s faq-a">We look at recent sales in your street and village, the state of your home and the market today. Then we explain the price to you.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">Who takes the photos?</h3>
+              <p class="body-s faq-a">We arrange a professional photographer, so your home looks its best online.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">Do I need to be home for viewings?</h3>
+              <p class="body-s faq-a">No. Your agent leads every viewing and tells you afterwards what people said.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">How fast will my home sell?</h3>
+              <p class="body-s faq-a">That depends on the village and the price. Your agent gives you an honest estimate at the kitchen table.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">Can I sell before I have found a new home?</h3>
+              <p class="body-s faq-a">Yes. Your agent can help you plan both, so you do not end up with two mortgages or no home at all.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">What happens to my request?</h3>
+              <p class="body-s faq-a">It is logged, so it will not get lost in an inbox. Your agent calls you to plan a visit.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">Do you sell homes outside Horst aan de Maas?</h3>
+              <p class="body-s faq-a">We focus on the sixteen villages of our municipality. That is where we know every street.</p>
+            </li>
+        </ul>
+      </div>
+      <div class="faq-panel" id="faq-villages" role="tabpanel" aria-labelledby="faq-tab-villages" hidden>
+        <ul class="faq-grid" role="list">
+            <li class="faq-item is-featured">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">Which village suits me best?</h3>
+              <p class="body-s faq-a">Tell us how you live and work. Your agent will tell you honestly where you would feel at home.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">Where are the shops and the market?</h3>
+              <p class="body-s faq-a">In Horst. The centre has shops, the market and café terraces within walking distance.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">Which villages are close to the Maas?</h3>
+              <p class="body-s faq-a">Broekhuizen, Broekhuizenvorst, Lottum and Grubbenvorst lie near the river.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">Where is it quiet and green?</h3>
+              <p class="body-s faq-a">Griendtsveen, America and Kronenberg, with the nature of the Peel close by.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">Which village is quick to Venlo?</h3>
+              <p class="body-s faq-a">Grubbenvorst and Sevenum. From there you are in Venlo in a few minutes.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">Are there schools in every village?</h3>
+              <p class="body-s faq-a">Most villages have a primary school. Secondary schools are in Horst and Venlo.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">How many villages are there?</h3>
+              <p class="body-s faq-a">Sixteen. Each one has its own pace and its own character.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">Is there public transport?</h3>
+              <p class="body-s faq-a">Horst-Sevenum has a train station. Buses connect most villages with Horst and Venlo.</p>
+            </li>
+            <li class="faq-item">
+              <svg class="faq-icon" aria-hidden="true"><use href="#i-question"/></svg>
+              <h3 class="title-6 faq-q">Can I visit the office first?</h3>
+              <p class="body-s faq-a">Yes. The coffee is on us, no appointment needed. Monday to Friday, 09:00 to 18:00.</p>
+            </li>
+        </ul>
+      </div>
+      <div class="faq-more">
+        <button class="btn-outline faq-more-btn" type="button" aria-expanded="false">See all questions</button>
+      </div>
+    </section>
+
+    <!-- 9. CLOSING CTA + VISIT US: text left, a 3D map of the villages right -->
+    <section id="contact" class="closing visit bg-dark-1 boxed-l pad-tb-128 body-on-dark" aria-labelledby="closing-title">
+      <div class="visit-grid gap-40">
+        <div class="visit-text flex-column gap-24">
+          <p class="sub-title subtitle-on-dark"><svg class="eyebrow-icon" aria-hidden="true"><use href="#i-houses"/></svg><span>Thinking of selling?</span></p>
+          <h2 id="closing-title" class="title-2 heading-on-dark closing-title">Start with a cup of coffee and an honest price.</h2>
+          <div class="flex-row flex-wrap flex-align-center gap-16">
+            <a class="btn-solid" href="#valuation">Plan a free valuation</a>
+            <a class="btn-outline-on-dark" href="#visit-map">Visit us</a>
+          </div>
+          <div class="visit-us flex-column gap-12">
+            <p class="sub-title subtitle-on-dark"><svg class="eyebrow-icon" aria-hidden="true"><use href="#i-houses"/></svg><span >Visit address</span></p>
+            <p class="body-l heading-on-dark">Gasthuisstraat 12, Horst</p>
+            <p class="body-m detail-on-dark">Monday to Friday, 09:00 to 18:00. The coffee is on us, no appointment needed.</p>
+          </div>
+        </div>
+        <div class="map-stage" id="visit-map" data-map>
+          <canvas class="map-canvas" aria-hidden="true"></canvas>
+          <div class="map-labels" aria-hidden="true"></div>
+          <div class="map-office" aria-hidden="true">
+            <img class="map-office-logo" src="assets/larkline-logo-light.svg" alt="">
+            <strong class="location-pin-title">Find us here</strong>
+            <span class="body-s">Gasthuisstraat 12, Horst</span>
+          </div>
+          <button class="map-replay body-s" type="button">Play again</button>
+          <p class="visually-hidden">Map of the sixteen villages of Horst aan de Maas. The camera flies to our office at Gasthuisstraat 12 in Horst.</p>
+        </div>
+      </div>
+      <section class="location-panel" id="location-details" aria-labelledby="location-heading" hidden>
+        <div class="location-panel-heading">
+          <div class="flex-column gap-8">
+            <img class="location-logo" src="assets/larkline-logo.svg" alt="" width="180" height="40">
+            <h2 id="location-heading" class="title-4 heading-on-light">Visit Larkline</h2>
+            <p class="body-m-strong">Gasthuisstraat 12, Horst</p>
+            <p class="body-m">See the map and plan your route.</p>
+          </div>
+          <a class="route-cta" href="https://www.google.com/maps/dir/?api=1&amp;destination=Gasthuisstraat%2012%2C%20Horst%2C%20Nederland" target="_blank" rel="noopener noreferrer">Plan your route <span aria-hidden="true">↗</span></a>
+        </div>
+        <iframe title="Map of Gasthuisstraat 12 in Horst" data-src="https://www.openstreetmap.org/export/embed.html?bbox=6.0437%2C51.4520%2C6.0557%2C51.4580&amp;layer=mapnik&amp;marker=51.4550%2C6.0497" loading="lazy"></iframe>
+        <p class="location-note body-s">Example address for this practice website. Map: © OpenStreetMap contributors. The route opens in Google Maps.</p>
+      </section>
+    </section>
+
+    <!-- Popup behind the location hint in the hero: the globe stops at the municipality -->
+    <dialog class="globe-dialog" aria-labelledby="globe-title">
+      <div class="globe-card bg-dark-1 body-on-dark flex-column gap-16">
+        <div class="globe-head flex-row flex-justify-between flex-align-start gap-16">
+          <div class="flex-column gap-8">
+            <p class="sub-title subtitle-on-dark"><svg class="eyebrow-icon" aria-hidden="true"><use href="#i-houses"/></svg><span>Where we are</span></p>
+            <h2 id="globe-title" class="title-4 heading-on-dark">Horst aan de Maas, North Limburg</h2>
+          </div>
+          <button class="globe-close" type="button" data-globe-close aria-label="Close"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+        </div>
+        <div class="map-stage globe-stage" data-map="area">
+          <canvas class="map-canvas" aria-hidden="true"></canvas>
+          <div class="map-labels" aria-hidden="true"></div>
+          <div class="map-office" aria-hidden="true"></div>
+          <button class="map-replay body-s" type="button">Play again</button>
+          <p class="visually-hidden">A globe that turns from the earth to Europe and then shows the sixteen villages of Horst aan de Maas.</p>
+        </div>
+        <p class="body-s globe-note">Point at a village to see who to ask.</p>
+      </div>
+    </dialog>
+
+  </main>
+
+  <footer class="site-footer bg-dark-1 dark-surface boxed-l pad-tb-80 flex-column gap-40 body-on-dark">
+    <div class="footer-grid gap-40">
+      <div class="flex-column gap-20">
+        <figure class="footer-office rounded-s">
+          <img class="footer-photo" src="assets/larkline-team.jpg" alt="Het team van Larkline in het makelaarskantoor in Horst" width="1672" height="941" loading="lazy">
+          <figcaption class="footer-photo-banner">
+            <img src="assets/larkline-logo-light.svg" alt="Larkline" width="180" height="40" loading="lazy">
+            <span>ESTATE AGENTS</span>
+
+          </figcaption>
+        </figure>
+      </div>
+      <div class="flex-column gap-12">
+        <p class="sub-title subtitle-on-dark"><svg class="eyebrow-icon" aria-hidden="true"><use href="#i-houses"/></svg><span >Address</span></p>
+        <p class="body-m">Gasthuisstraat 12, Horst<br>Limburg, the Netherlands</p>
+      </div>
+      <div class="flex-column gap-12">
+        <p class="sub-title subtitle-on-dark"><svg class="eyebrow-icon" aria-hidden="true"><use href="#i-houses"/></svg><span >Call or write</span></p>
+        <a class="body-m link-on-dark footer-link" href="tel:+31775550100">+31 77 555 0100</a>
+        <a class="body-m link-on-dark footer-link" href="mailto:hello@larkline.example">hello@larkline.example</a>
+      </div>
+      <div class="flex-column gap-12">
+        <p class="sub-title subtitle-on-dark"><svg class="eyebrow-icon" aria-hidden="true"><use href="#i-houses"/></svg><span >Explore</span></p>
+        <a class="body-m link-on-dark footer-link" href="index.html#valuation">Selling your home</a>
+        <a class="body-m link-on-dark footer-link" href="index.html#homes">Homes for sale</a>
+        <a class="body-m link-on-dark footer-link" href="index.html#team">Our team</a>
+        <a class="body-m link-on-dark footer-link" href="index.html#faq">Questions</a>
+      </div>
+    </div>
+    <div class="footer-legal-static flex-column gap-8 body-s heading-on-dark">
+      <p>&copy; 2026 Larkline Estates. Sales only, no rentals.</p>
+      <p>Prototype v14. Photos are placeholders from Unsplash.</p>
+    </div>
+    <div class="footer-bottom">
+      <img class="footer-logo" src="assets/larkline-logo-light.svg" alt="Larkline" width="180" height="40" loading="lazy">
+      <div class="footer-bottom-right">
+        <ul class="social-list flex-row" aria-label="Larkline on social media">
+          <li><a class="social-link link-on-dark" href="#" aria-label="Facebook (placeholder link)"><svg class="social-icon" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+          <li><a class="social-link link-on-dark" href="#" aria-label="Instagram (placeholder link)"><svg class="social-icon" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+          <li><a class="social-link link-on-dark" href="#" aria-label="LinkedIn (placeholder link)"><svg class="social-icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+          <li><a class="social-link link-on-dark" href="#" aria-label="YouTube (placeholder link)"><svg class="social-icon" aria-hidden="true"><use href="#i-youtube"/></svg></a></li>
+          <li><a class="social-link link-on-dark" href="index.html#alerts" aria-label="WhatsApp"><svg class="social-icon" aria-hidden="true"><use href="#i-whatsapp"/></svg></a></li>
+        </ul>
+        <div class="footer-legal flex-row flex-wrap gap-16 body-s heading-on-dark">
+          <p>&copy; 2026 Larkline Estates. Sales only, no rentals.</p>
+          <p>Prototype v14. Photos are placeholders from Unsplash.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a class="to-top" href="#top" aria-label="Back to the top"><svg class="meta-icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js" defer></script>
+</body>
+</html>

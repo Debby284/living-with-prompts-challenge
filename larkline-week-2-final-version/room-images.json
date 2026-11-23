@@ -1,0 +1,46 @@
+[
+  {
+    "src": "https://images.unsplash.com/photo-1779983646041-1eef6de0f34a?auto=format&fit=crop&w=1400&q=75",
+    "alt": "Front of America Country House with its green picket fence"
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1772797583328-f83bc3f94f80?auto=format&fit=crop&w=700&q=75",
+    "alt": "Living room with wooden shelves and soft daylight"
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1585128833500-ec98262cb4f5?auto=format&fit=crop&w=700&q=75",
+    "alt": "Kitchen with dining space by the window"
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1657040899594-34f4b6739988?auto=format&fit=crop&w=700&q=75",
+    "alt": "Bedroom with white linen and a plant"
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1662236337008-e546a2359f45?auto=format&fit=crop&w=700&q=75",
+    "alt": "Garden path towards the back of the house"
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1722247481561-9d00962daf6d?auto=format&fit=crop&w=1000&q=80",
+    "alt": "Illustrative hallway with stairs and a painting",
+    "source": "https://unsplash.com/photos/iYs7V9uv0P0",
+    "credit": "Lisa Anna / Unsplash"
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1721738857280-f4e7c1c43f2f?auto=format&fit=crop&w=1000&q=80",
+    "alt": "Illustrative second bedroom with a bed and stool",
+    "source": "https://unsplash.com/photos/531S9J6W510",
+    "credit": "Alex Tyson / Unsplash"
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1722247480769-de6954b0b20f?auto=format&fit=crop&w=1000&q=80",
+    "alt": "Illustrative third bedroom with a woven headboard and garden doors",
+    "source": "https://unsplash.com/photos/cty6Z4-hzVk",
+    "credit": "Lisa Anna / Unsplash"
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1754574741164-a41418029cfb?auto=format&fit=crop&w=1000&q=80",
+    "alt": "Illustrative bathroom with warm neutral walls and a bathtub",
+    "source": "https://unsplash.com/photos/xS608no3sTk",
+    "credit": "Ela De Pure / Unsplash"
+  }
+]
